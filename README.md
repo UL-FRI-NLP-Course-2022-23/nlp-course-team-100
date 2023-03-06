@@ -2,7 +2,7 @@
 
 Team members:
  * `Jaša Frelih Črv`, `63170094`, `jf6340@student.uni-lj.si`
- * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
+ * `Žan Jonke`, `63150132`, `zj0527@stufent.uni-lj.si`
  * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
  
 Group public acronym/name: `THINK OF PUBLIC STRING FOR YOUR GROUP`
