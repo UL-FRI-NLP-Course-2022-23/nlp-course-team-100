@@ -1,7 +1,7 @@
-# Natural language processing course 2022/23: `Put name of your project here`
+# Natural language processing course 2022/23: 'Project 1: Literacy situation models knowledge base creation'
 
 Team members:
- * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
+ * `Jaša Frelih Črv`, `63170094`, `jf6340@student.uni-lj.si`
  * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
  * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
  
