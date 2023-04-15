@@ -1,3 +1,8 @@
+# General Imports
+import json
+
+# Specific Imports
+from utils import *
 import spacy
 import neuralcoref
 
@@ -8,15 +13,10 @@ neuralcoref.add_to_pipe(nlp_spacy)
 
 def spacy_coref(story):
 
-    # Concatenate the stories
-    concat_story = concatenate_sentences(story["story"])
+    # Perform coref
+    cor = nlp_spacy(story)
 
-    # Perform ner
-    cor = nlp_spacy(concat_story)
-
-    print(doc._.coref_clusters)
-
-    coref_result = doc._.coref_resolved  # You can see cluster of similar mentions
+    coref_result = cor._.coref_resolved  # You can see cluster of similar mentions
 
     return coref_result
 
@@ -28,10 +28,8 @@ def main():
     stories = data["stories"]
     for story in stories:
         results = spacy_coref(story)
-        print(results)
-        #filename = "../results/spacy/ner/" + results[2]['title'].replace(" ", "_")+".json"
-        #print(filename)
-        #write_characters_to_json(results[0], filename)
+        filename = "../results/spacy/coref/" + story['title'].replace(" ", "_")+".json"
+        write_characters_to_json(results[0], filename)
 
 
 if __name__ == "__main__":
