@@ -54,8 +54,9 @@ def main():
     stories = data["stories"]
     for story in stories:
         results = name_entity_recognition(story)
-
-        print(results)
+        filename = "../results/spacy/ner/" + results[2]['title'].replace(" ", "_")+".json"
+        print(filename)
+        write_characters_to_json(results[0], filename)
 
 
 if __name__ == "__main__":

@@ -31,17 +31,17 @@
   </component>
   <component name="RunManager" selected="Python.spacy_ner">
     <configuration name="spacy_ner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="nlp-course-team-100" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\FAKS\PROGRAMIRANJE\PROJEKTI\PROJEKTI\NVRM\NVRM_Assignment1\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/spacy_ner.py" />
       <option name="PARAMETERS" value="" />
@@ -93,7 +93,7 @@
       <workItem from="1681544665522" duration="6000" />
       <workItem from="1681548753099" duration="2811000" />
       <workItem from="1681551590593" duration="135000" />
-      <workItem from="1681551757863" duration="1465000" />
+      <workItem from="1681551757863" duration="1765000" />
     </task>
     <servers />
   </component>
@@ -114,6 +114,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nlp_course_team_100$stanza_ner.coverage" NAME="stanza_ner Coverage Results" MODIFIED="1681552055249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
-    <SUITE FILE_PATH="coverage/nlp_course_team_100$spacy_ner.coverage" NAME="spacy_ner Coverage Results" MODIFIED="1681553028655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/nlp_course_team_100$spacy_ner.coverage" NAME="spacy_ner Coverage Results" MODIFIED="1681553533768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
   </component>
 </project>
