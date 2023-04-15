@@ -30,7 +30,6 @@ def spacy_ner(story):
     # Get only unique entities
     named_entity = get_unique_entities(named_entity)
 
-
     return named_entity
 
 
