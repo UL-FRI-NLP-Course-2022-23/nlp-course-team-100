@@ -14,6 +14,9 @@ def stanza_ner(stories):
         named_entities = [str(i).lower().replace("'s","") for i in named_entities]
         named_entities = remove_articles(named_entities)
         named_entities = get_unique_entities(named_entities)
+        filename = "../results/stanza/ner/"+story["title"].replace(" ","_")+".json"
+        write_characters_to_json(named_entities,filename)
+        print(filename)
         print(named_entities)
         i+=1
 

@@ -1,3 +1,4 @@
+import json
 def concatenate_sentences(sentences):
     concatenated_text = " ".join(sentences)
     return concatenated_text
@@ -17,3 +18,9 @@ def get_unique_entities(strings):
         if string not in unique_entities:
             unique_entities.append(string)
     return unique_entities
+
+
+def write_characters_to_json(unique_strings, filename):
+    data = {"characters": unique_strings}
+    with open(filename, 'w') as f:
+        json.dump(data, f)
