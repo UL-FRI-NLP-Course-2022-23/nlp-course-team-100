@@ -21,15 +21,24 @@ def spacy_coref(story):
     return coref_result
 
 
+def write_to_json(results, title):
+
+    filename = "../results/spacy/coref/" + title.replace(" ", "_") + ".json"
+    write_coref_to_json(results, filename)
+
+
 def main():
     corpus_path = "../data/corpus/AesopFables.json"
     with open(corpus_path) as f:
         data = json.load(f)
     stories = data["stories"]
     for story in stories:
-        results = spacy_coref(story)
-        filename = "../results/spacy/coref/" + story['title'].replace(" ", "_")+".json"
-        write_characters_to_json(results[0], filename)
+        # Concatenate the stories
+        concat_story = concatenate_sentences(story["story"])
+
+        results = spacy_coref(concat_story)
+
+        write_to_json(results, story['title'])
 
 
 if __name__ == "__main__":

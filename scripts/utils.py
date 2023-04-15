@@ -24,3 +24,8 @@ def write_characters_to_json(unique_strings, filename):
     data = {"characters": unique_strings}
     with open(filename, 'w') as f:
         json.dump(data, f)
+
+def write_coref_to_json(unique_strings, filename):
+    data = {"coref": unique_strings}
+    with open(filename, 'w') as f:
+        json.dump(data, f)
