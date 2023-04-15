@@ -4,10 +4,7 @@ import stanza
 
 nlp = stanza.Pipeline(lang='en', processors='tokenize,ner')
 def stanza_ner(stories):
-    i=0
     for story in stories:
-        if i==1:
-            break
         concat_story = concatenate_sentences(story["story"])
         ner = nlp(concat_story)
         named_entities = [i.text for i in ner.ents if i.type =='PERSON']
@@ -16,9 +13,6 @@ def stanza_ner(stories):
         named_entities = get_unique_entities(named_entities)
         filename = "../results/stanza/ner/"+story["title"].replace(" ","_")+".json"
         write_characters_to_json(named_entities,filename)
-        print(filename)
-        print(named_entities)
-        i+=1
 
 
 def main():
