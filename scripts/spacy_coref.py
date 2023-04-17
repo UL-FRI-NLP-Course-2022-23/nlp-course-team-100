@@ -13,10 +13,15 @@ neuralcoref.add_to_pipe(nlp_spacy)
 
 def spacy_coref(story):
 
+    coref_result = ''
+
     # Perform coref
     cor = nlp_spacy(story)
 
-    coref_result = cor._.coref_resolved  # You can see cluster of similar mentions
+    resolved = cor._.has_coref
+
+    if resolved:
+        coref_result = cor._.coref_resolved  # You can see cluster of similar mentions
 
     return coref_result
 

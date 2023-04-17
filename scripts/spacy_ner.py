@@ -11,7 +11,7 @@ import spacy
 nlp_spacy = spacy.load('en_core_web_sm')
 
 
-def spacy_ner(story, use_cor_res=False):
+def spacy_ner(story):
 
     # Perform ner
     ner = nlp_spacy(story)
