@@ -94,6 +94,42 @@ class SentimentAnsamble(SentimentPrediction):
     def score_sentiment_sentence(self, sentence):
         scores = [model.score_sentiment_sentence(sentence) for model in self.models]
         return np.average(scores, weights=self.weights)
+    
+    def add_story(self, story):
+        if not story["number"] in self.stories:
+            self.stories[story["number"]] = story
+
+    def add_stories(self, stories):
+        for story in stories:
+            self.add_story(story)
+        
+    def eval_weights_based_on_stories(self):
+        results = {
+            "all":0,
+            "correct": {
+                model: 0 for model in self.models
+            }                        
+        }
+        for story_number in self.stories:
+            story = self.stories[story_number]    
+            if not "character_sentences" in story:
+                continue
+            
+            character_sentences = story["character_sentences"]
+            for character in story["characters"]:
+                if not character in character_sentences:
+                    continue
+                results["all"] += 1
+                scores = {  
+                    model: model.score_sentiment_sentences(character_sentences[character]) for model in self.models
+                }
+
+                for model in scores:
+                    if scores[model] == story["character_sentiment"][character]:
+                        results[model] += 1
+
+
+        self.weights = [results["all"]/results["correct"][model] for model in self.modelsß]
 
     def __str__(self):
         return "SentimentAnsamble"
