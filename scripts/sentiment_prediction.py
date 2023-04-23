@@ -228,7 +228,3 @@ def test_the_wolf_and_kid_story():
 
 if __name__ == "__main__":
     test_the_wolf_and_kid_story()
-
-    #ss = SentimentSpacy()
-    #print(ss.score_sentiment_sentence("Hello my love"))
-    #print(ss.score_sentiment_sentences(["Hello my love", "I love you"]))
