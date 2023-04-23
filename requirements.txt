@@ -2,3 +2,5 @@ afinn
 transformers
 spacy
 spacytextblob
+scipy
+stanza

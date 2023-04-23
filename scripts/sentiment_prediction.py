@@ -4,6 +4,7 @@ import stanza
 import numpy as np
 import spacy
 from spacytextblob.spacytextblob import SpacyTextBlob
+from scipy.special import softmax
 
 class SentimentPrediction: 
 
@@ -88,7 +89,7 @@ class SentimentAnsamble(SentimentPrediction):
             SentimentStanza(),
             SentimentSpacy()
         ]
-        self.weights = [1]*len(self.models)
+        self.weights = softmax([1]*len(self.models))
         self.stories = {}
 
     def score_sentiment_sentence(self, sentence):
@@ -129,7 +130,7 @@ class SentimentAnsamble(SentimentPrediction):
                         results[model] += 1
 
 
-        self.weights = [results["all"]/results["correct"][model] for model in self.models]
+        self.weights = softmax([results["all"]/results["correct"][model] for model in self.models])
 
     def __str__(self):
         return "SentimentAnsamble"
