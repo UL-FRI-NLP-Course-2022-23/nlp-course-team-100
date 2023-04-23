@@ -1,0 +1,4 @@
+afinn
+transformers
+spacy
+spacytextblob
