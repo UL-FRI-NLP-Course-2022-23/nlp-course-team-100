@@ -129,7 +129,7 @@ class SentimentAnsamble(SentimentPrediction):
                         results[model] += 1
 
 
-        self.weights = [results["all"]/results["correct"][model] for model in self.modelsß]
+        self.weights = [results["all"]/results["correct"][model] for model in self.models]
 
     def __str__(self):
         return "SentimentAnsamble"
