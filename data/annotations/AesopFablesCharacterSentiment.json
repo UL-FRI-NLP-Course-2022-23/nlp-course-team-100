@@ -1163,635 +1163,859 @@
     },
 
     {
-      "number": "46",
-      "title": "The Wolf and the Sheep ",
-      "story":[
-        "A Wolf had been hurt in a fight with a Bear.",
-        "He was unable to move and could not satisfy his hunger and thirst.",
-        "A Sheep passed by near his hiding place, and the Wolf called to him.",
-        "Please fetch me a drink of water, he begged, that might give me strength enough so I can get me some solid food.",
-        "Solid food!, said the Sheep.",
-        "That means me, I suppose.",
-        "If I should bring you a drink, it would only serve to wash me down your throat.",
-        "Don't talk to me about a drink!"
-      ],
-      "moral": "A knave's hypocrisy is easily seen through.",
-      "characters": []
+        "number": "46",
+        "title": "The Wolf and the Sheep ",
+        "story":[
+          "A Wolf had been hurt in a fight with a Bear.",
+          "He was unable to move and could not satisfy his hunger and thirst.",
+          "A Sheep passed by near his hiding place, and the Wolf called to him.",
+          "Please fetch me a drink of water, he begged, that might give me strength enough so I can get me some solid food.",
+          "Solid food!, said the Sheep.",
+          "That means me, I suppose.",
+          "If I should bring you a drink, it would only serve to wash me down your throat.",
+          "Don't talk to me about a drink!"
+        ],
+        "moral": "A knave's hypocrisy is easily seen through.",
+        "characters": [
+          "The Wolf", "The Bear", "The Sheep"
+        ],
+        "character_sentiment": {
+          "The Wold": -1,
+          "The Bear": 0,
+          "The Sheep": 1,                                    
+        }
     },
 
     {
-      "number": "47",
-      "title": "The Hares and the Frogs",
-      "story":[
-        "Hares, as you know, are very timid, The least shadow, sends them scurrying in fright to a hiding place.",
-        "Once they decided to die rather than live in such misery.",
-        "But while they were debating how best to meet death, they thought they heard a noise and in a flash were scampering off to the warren.",
-        "On the way they passed a pond where a family of Frogs was sitting among the reeds on the bank.",
-        "In an instant the startled Frogs were seeking safety in the mud.",
-        "Look, cried a Hare, things are not so bad after all, for here are creatures who are even afraid of us!"
-      ],
-      "moral": "However unfortunate we may think we are there is always someone worse off than ourselves.",
-      "characters": []
+        "number": "47",
+        "title": "The Hares and the Frogs",
+        "story":[
+          "Hares, as you know, are very timid, The least shadow, sends them scurrying in fright to a hiding place.",
+          "Once they decided to die rather than live in such misery.",
+          "But while they were debating how best to meet death, they thought they heard a noise and in a flash were scampering off to the warren.",
+          "On the way they passed a pond where a family of Frogs was sitting among the reeds on the bank.",
+          "In an instant the startled Frogs were seeking safety in the mud.",
+          "Look, cried a Hare, things are not so bad after all, for here are creatures who are even afraid of us!"
+        ],
+        "moral": "However unfortunate we may think we are there is always someone worse off than ourselves.",
+        "characters": [
+          "The Hares", "The Warren", "The Frogs"
+        ],
+        "character_sentiment": {
+          "The Hare": 0,
+          "The Warren": 0,
+          "The Frogs": 0                                   
+        }
     },
 
     {
-      "number": "48",
-      "title": "The Fox and the Stork ",
-      "story":[
-        "The Fox one day thought of a plan to amuse himself at the expense of the Stork, at whose odd appearance he was always laughing.",
-        "You must come and dine with me today, he said to the Stork, smiling to himself at the trick he was going to play.",
-        "The Stork gladly accepted the invitation and arrived in good time and with a very good appetite.",
-        "For dinner the Fox served soup, But it was set out in a very shallow dish, and all the Stork could do was to wet the very tip of his bill.",
-        "Not a drop of soup could he get, But the Fox lapped it up easily, and, to increase the disappointment of the Stork, made a great show of enjoyment.",
-        "The hungry Stork was much displeased at the trick, but he was a calm, even-tempered fellow and saw no good in flying into a rage.",
-        "Instead, not long afterward, he invited the Fox to dine with him in turn.",
-        "The Fox arrived promptly at the time that had been set, and the Stork served a fish dinner that had a very appetizing smell.",
-        "But it was served in a tall jar with a very narrow neck.",
-        "The Stork could easily get at the food with his long bill, but all the Fox could do was to lick the outside of the jar, and sniff at the delicious odor.",
-        "And when the Fox lost his temper, the Stork said calmly: Do not play tricks on your neighbors unless you can stand the same treatment yourself."
-      ],
-      "moral": "Do not play tricks on your neighbors unless you can stand the same treatment yourself.",
-      "characters": []
+        "number": "48",
+        "title": "The Fox and the Stork ",
+        "story":[
+          "The Fox one day thought of a plan to amuse himself at the expense of the Stork, at whose odd appearance he was always laughing.",
+          "You must come and dine with me today, he said to the Stork, smiling to himself at the trick he was going to play.",
+          "The Stork gladly accepted the invitation and arrived in good time and with a very good appetite.",
+          "For dinner the Fox served soup, But it was set out in a very shallow dish, and all the Stork could do was to wet the very tip of his bill.",
+          "Not a drop of soup could he get, But the Fox lapped it up easily, and, to increase the disappointment of the Stork, made a great show of enjoyment.",
+          "The hungry Stork was much displeased at the trick, but he was a calm, even-tempered fellow and saw no good in flying into a rage.",
+          "Instead, not long afterward, he invited the Fox to dine with him in turn.",
+          "The Fox arrived promptly at the time that had been set, and the Stork served a fish dinner that had a very appetizing smell.",
+          "But it was served in a tall jar with a very narrow neck.",
+          "The Stork could easily get at the food with his long bill, but all the Fox could do was to lick the outside of the jar, and sniff at the delicious odor.",
+          "And when the Fox lost his temper, the Stork said calmly: Do not play tricks on your neighbors unless you can stand the same treatment yourself."
+        ],
+        "moral": "Do not play tricks on your neighbors unless you can stand the same treatment yourself.",
+        "characters": [
+          "The Fox", "The Stork"
+        ],
+        "character_sentiment": {
+          "The Fox": -1,
+          "The Stork": 1                           
+        }
     },
 
     {
-      "number": "49",
-      "title": "The Travelers and the Sea",
-      "story":[
-        "Two Travelers were walking along the seashore, Far out they saw something riding on the waves.",
-        "Look, said one, a great ship rides in from distant lands, bearing rich treasures!",
-        "The object they saw came ever nearer the shore.",
-        "No, said the other, that is not a treasure ship.",
-        "That is some fisherman's skiff, with the day's catch of savoury fish.",
-        "Still nearer came the object. The waves washed it up on shore.",
-        "It is a chest of gold lost from some wreck, they cried.",
-        "Both Travelers rushed to the beach, but there they found nothing but a water-soaked log."
-      ],
-      "moral": "Do not let your hopes carry you away from reality.",
-      "characters": []
-    },
-
-
-    {
-      "number": "50",
-      "title": "The Wolf and the Lion",
-      "story":[
-        "A Wolf had stolen a Lamb and was carrying it off to his lair to eat it.",
-        "But his plans were very much changed when he met a Lion, who, without making any excuses, took the Lamb away from him.",
-        "The Wolf made off to a safe distance, and then said in a much injured tone: You have no right to take my property like that!",
-        "The Lion looked back, but as the Wolf was too far away to be taught a lesson without too much inconvenience, he said: Your property?",
-        "Did you buy it, or did the Shepherd make you a gift of it?, Pray tell me, how did you get it?"
-      ],
-      "moral": "What is evil won is evil lost.",
-      "characters": []
-    },
-
-    {
-      "number": "51",
-      "title": "The Stag and His Reflection",
-      "story":[
-        "A Stag, drinking from a crystal spring, saw himself mirrored in the clear water.",
-        "He greatly admired the graceful arch of his antlers, but he was very much ashamed of his spindling legs.",
-        "How can it be, he sighed, that I should be cursed with such legs when I have so magnificent a crown.",
-        "At that moment he scented a panther and in an instant was bounding away through the forest.",
-        "But as he ran his wide-spreading antlers caught in the branches of the trees, and soon the Panther overtook him.",
-        "Then the Stag perceived that the legs of which he was so ashamed would have saved him had it not been for the useless ornaments on his head."
-      ],
-      "moral": "We often make much of the ornamental and despise the useful.",
-      "characters": []
-    },
-
-    {
-      "number": "52",
-      "title": "The Peacock",
-      "story":[
-        "The Peacock, they say, did not at first have the beautiful feathers in which he now takes so much pride.",
-        "These, Juno, whose favorite he was, granted to him one day when he begged her for a train of feathers to distinguish him from the other birds.",
-        "Then, decked in his finery, gleaming with emerald, gold, purple, and azure, he strutted proudly among the birds.",
-        "All regarded him with envy. Even the most beautiful pheasant could see that his beauty was surpassed.",
-        "Presently the Peacock saw an Eagle soaring high up in the blue sky and felt a desire to fly, as he had been accustomed to do.",
-        "Lifting his wings he tried to rise from the ground.",
-        "But the weight of his magnificent train held him down.",
-        "Instead of flying up to greet the first rays of the morning sun or to bathe in the rosy light among the floating clouds at sunset, he would have to walk the ground more encumbered and oppressed than any common barnyard fowl."
-      ],
-      "moral": "Do not sacrifice your freedom for the sake of pomp and show.",
-      "characters": []
-    },
-
-    {
-      "number": "53",
-      "title": "The Mice and the Weasels",
-      "story":[
-        "The Weasels and the Mice were always up in arms against each other.",
-        "In every battle the Weasels carried off the victory, as well as a large number of the Mice, which they ate for dinner next day.",
-        "In despair the Mice called a council, and there it was decided that the Mouse army was always beaten because it had no leaders.",
-        "So a large number of generals and commanders were appointed from among the most eminent Mice.",
-        "To distinguish themselves from the soldiers in the ranks, the new leaders proudly bound on their heads lofty crests and ornaments of feathers or straw.",
-        "Then after long preparation of the Mouse army in all the arts of war, they sent a challenge to the Weasels.",
-        "The Weasels accepted the challenge with eagerness, for they were always ready for a fight when a meal was in sight.",
-        "They immediately attacked the Mouse army in large numbers.",
-        "Soon the Mouse line gave way before the attack and the whole army fled for cover.",
-        "The privates easily slipped into their holes, but the Mouse leaders could not squeeze through the narrow openings because of their head-dresses.",
-        "Not one escaped the teeth of the hungry Weasels."
-      ],
-      "moral": "Greatness has its penalties.",
-      "characters": []
-    },
-
-    {
-      "number": "54",
-      "title": "The Wolf and the Lean Dog",
-      "story":[
-        "A Wolf prowling near a village one evening met a Dog.",
-        "It happened to be a very lean and bony Dog, and Master Wolf would have turned up his nose at such meager fare had he not been more hungry than usual.",
-        "So he began to edge toward the Dog, while the Dog backed away.",
-        "Let me remind your lordship, said the Dog, his words interrupted now and then as he dodged a snap of the Wolf's teeth, how unpleasant it would be to eat me now.",
-        "Look at my ribs. I am nothing but skin and bone. But let me tell you something in private.",
-        "In a few days my master will give a wedding feast for his only daughter.",
-        "You can guess how fine and fat I will grow on the scraps from the table.",
-        "Then is the time to eat me. The Wolf could not help thinking how nice it would be to have a fine fat Dog to eat instead of the scrawny object before him.",
-        "So he went away pulling in his belt and promising to return.",
-        "Some days later the Wolf came back for the promised feast.",
-        "He found the Dog in his master's yard, and asked him to come out and be eaten.",
-        "Sir, said the Dog, with a grin, I shall be delighted to have you eat me.", "I'll be out as soon as the porter opens the door.",
-        "But the porter was a huge Dog whom the Wolf knew by painful experience to be very unkind toward wolves.",
-        "So he decided not to wait and made off as fast as his legs could carry him."
-      ],
-      "moral": "Do not depend on the promises of those whose interest it is to deceive you.",
-      "characters": []
-    },
-
-    {
-      "number": "55",
-      "title": "The Fox and the Lion",
-      "story":[
-        "A very young Fox, who had never before seen a Lion, happened to meet one in the forest.",
-        "A single look was enough to send the Fox off at top speed for the nearest hiding place.",
-        "The second time the Fox saw the Lion he stopped behind a tree to look at him a moment before slinking away.",
-        "But the third time, the Fox went boldly up to the Lion and, without turning a hair, said, Hello, there, old top."
-      ],
-      "moral": "Acquaintance with evil blinds us to its dangers.",
-      "characters": []
-    },
-
-    {
-      "number": "56",
-      "title": "The Lion and the Ass",
-      "story":[
-        "A Lion and an Ass agreed to go hunting together.",
-        "In their search for game the hunters saw a number of Wild Goats run into a cave, and laid plans to catch them.",
-        "The Ass was to go into the cave and drive the Goats out, while the Lion would stand at the entrance to strike them down.",
-        "The plan worked beautifully. The Ass made such a frightful din in the cave, kicking and braying with all his might, that the Goats came running out in a panic of fear, only to fall victim to the Lion.",
-        "The Ass came proudly out of the cave.",
-        "Did you see how I made them run?,he said.",
-        "Yes, indeed, answered the Lion, and if I had not known you and your kind I should certainly have run, too."
-      ],
-      "moral": "The loud-mouthed boaster does not impress nor frighten those who know him.",
-      "characters": []
-    },
-
-    {
-      "number": "57",
-      "title": "The Dog and His Master's Dinner",
-      "story":[
-        "A Dog had learned to carry his master's dinner to him every day.",
-        "He was very faithful to his duty, though the smell of the good things in the basket tempted him.",
-        "The Dogs in the neighborhood noticed him carrying the basket and soon discovered what was in it.",
-        "They made several attempts to steal it from him.",
-        "But he always guarded it faithfully.",
-        "Then one day all the Dogs in the neighborhood got together and met him on his way with the basket.",
-        "The Dog tried to run away from them.",
-        "But at last he stopped to argue.",
-        "That was his mistake.",
-        "They soon made him feel so ridiculous that he dropped the basket and seized a large piece of roast meat intended for his master's dinner.",
-        "Very well, he said, you divide the rest."
-      ],
-      "moral": "Do not stop to argue with temptation.",
-      "characters": []
-    },
-
-    {
-      "number": "58",
-      "title": "The Vain Jackdaw and his Borrowed Feathers",
-      "story":[
-        "A Jackdaw chanced to fly over the garden of the King's palace.",
-        "There he saw with much wonder and envy a flock of royal Peacocks in all the glory of their splendid plumage.",
-        "Now the black Jackdaw was not a very handsome bird, nor very refined in manner.",
-        "Yet he imagined that all he needed to make himself fit for the society of the Peacocks was a dress like theirs.",
-        "So he picked up some castoff feathers of the Peacocks and stuck them among his own black plumes.",
-        "Dressed in his borrowed finery he strutted loftily among the birds of his own kind.",
-        "Then he flew down into the garden among the Peacocks.",
-        "But they soon saw who he was.",
-        "Angry at the cheat, they flew at him, plucking away the borrowed feathers and also some of his own.",
-        "The poor Jackdaw returned sadly to his former companions.",
-        "There another unpleasant surprise awaited him.",
-        "They had not forgotten his superior airs toward them, and, to punish him, they drove him away with a rain of pecks and jeers."
-      ],
-      "moral": "Borrowed feathers do not make fine birds.",
-      "characters": []
-    },
-
-    {
-      "number": "59",
-      "title": "The Monkey and the Dolphin",
-      "story":[
-        "It happened once upon a time that a certain Greek ship bound for Athens was wrecked off the coast close to Piraeus, the port of Athens.",
-        "Had it not been for the Dolphins, who at that time were very friendly toward mankind and especially toward Athenians, all would have perished.",
-        "But the Dolphins took the shipwrecked people on their backs and swam with them to shore.",
-        "Now it was the custom among the Greeks to take their pet monkeys and dogs with them whenever they went on a voyage.",
-        "So when one of the Dolphins saw a Monkey struggling in the water, he thought it was a man, and made the Monkey climb up on his back.",
-        "Then off he swam with him toward the shore.", "The Monkey sat up, grave and dignified, on the Dolphin's back.",
-        "You are a citizen of illustrious Athens, are you not?, asked the Dolphin politely.",
-        "Yes, answered the Monkey, proudly. My family is one of the noblest in the city.",
-        "Indeed, said the Dolphin. Then of course you often visit Piraeus.",
-        "Yes, yes, replied the Monkey.Indeed, I do. I am with him constantly.",
-        "Piraeus is my very best friend.",
-        "This answer took the Dolphin by surprise, and, turning his head, he now saw what it was he was carrying.",
-        "Without more ado, he dived and left the foolish Monkey to take care of himself, while he swam off in search of some human being to save."
-      ],
-      "moral": "One falsehood leads to another.",
-      "characters": []
-    },
-
-    {
-      "number": "60",
-      "title": "The Wolf and the Ass",
-      "story":[
-        "An Ass was feeding in a pasture near a wood when he saw a Wolf lurking in the shadows along the hedge.",
-        "He easily guessed what the Wolf had in mind, and thought of a plan to save himself.",
-        "So he pretended he was lame, and began to hobble painfully.",
-        "When the Wolf came up, he asked the Ass what had made him lame, and the Ass replied that he had stepped on a sharp thorn.",
-        "Please pull it out, he pleaded, groaning as if in pain.",
-        "If you do not, it might stick in your throat when you eat me.",
-        "The Wolf saw the wisdom of the advice, for he wanted to enjoy his meal without any danger of choking.",
-        "So the Ass lifted up his foot and the Wolf began to search very closely and carefully for the thorn.",
-        "Just then the Ass kicked out with all his might, tumbling the Wolf a dozen paces away.",
-        "And while the Wolf was getting very slowly and painfully to his feet, the Ass galloped away in safety.",
-        "Serves me right, growled the Wolf as he crept into the bushes.",
-        "I'm a butcher by trade, not a doctor."
-      ],
-      "moral": "Stick to your trade.",
-      "characters": []
-    },
-
-    {
-      "number": "61",
-      "title": "The Monkey and the Cat",
-      "story":[
-        "Once upon a time a Cat and a Monkey lived as pets in the same house.",
-        "They were great friends and were constantly in all sorts of mischief together.",
-        "What they seemed to think of more than anything else was to get something to eat, and it did not matter much to them how they got it.",
-        "One day they were sitting by the fire, watching some chestnuts roasting on the hearth.",
-        "How to get them was the question.",
-        "I would gladly get them, said the cunning Monkey, but you are much more skillful at such things than I am.",
-        "Pull them out and I'll divide them between us.",
-        "Pussy stretched out her paw very carefully, pushed aside some of the cinders, and drew back her paw very quickly.",
-        "Then she tried it again, this time pulling a chestnut half out of the fire.",
-        "A third time and she drew out the chestnut.",
-        "This performance she went through several times, each time singeing her paw severely.",
-        "As fast as she pulled the chestnuts out of the fire, the Monkey ate them up.",
-        "Now the master came in, and away scampered the rascals, Mistress Cat with a burnt paw and no chestnuts.",
-        "From that time on, they say, she contented herself with mice and rats and had little to do with Sir Monkey."
-      ],
-      "moral": "The flatterer seeks some benefit at your expense.",
-      "characters": []
-    },
-
-    {
-      "number": "62",
-      "title": "The Dogs and the Fox",
-      "story":[
-        "Some Dogs found the skin of a Lion and furiously began to tear it with their teeth.",
-        "A Fox chanced to see them and laughed scornfully.",
-        "If that Lion had been alive, he said, it would have been a very different story.",
-        "He would have made you feel how much sharper his claws are than your teeth."
-      ],
-      "moral": "It is easy and also contemptible to kick a man that is down.",
-      "characters": []
-    },
-
-    {
-      "number": "63",
-      "title": "The Dogs and the Hides",
-      "story":[
-        "Some hungry Dogs saw a number of hides at the bottom of a stream where the Tanner had put them to soak.",
-        "A fine hide makes an excellent meal for a hungry Dog, but the water was deep and the Dogs could not reach the hides from the bank.",
-        "So they held a council and decided that the very best thing to do was to drink up the river.",
-        "All fell to lapping up the water as fast as they could.",
-        "But though they drank and drank until, one after another, all of them had burst with drinking, still, for all their effort, the water in the river remained as high as ever."
-      ],
-      "moral": "Do not try to do impossible things.",
-      "characters": []
-    },
-
-    {
-      "number": "64",
-      "title": "The Rabbit, the Weasel, and the Cat",
-      "story":[
-        "A Rabbit left his home one day for a dinner of clover.",
-        "But he forgot to latch the door of his house and while he was gone a Weasel walked in and calmly made himself at home.",
-        "When the Rabbit returned, there was the Weasel's nose sticking out of the Rabbit's own doorway, sniffing the fine air.",
-        "The Rabbit was quite angry for a Rabbit, and requested the Weasel to move out.",
-        "But the Weasel was perfectly content. He was settled down for good.",
-        "A wise old Cat heard the dispute and offered to settle it.",
-        "Come close to me, said the Cat, I am very deaf.",
-        "Put your mouths close to my ears while you tell me the facts.",
-        "The unsuspecting pair did as they were told and in an instant the Cat had them both under her claws.",
-        "No one could deny that the dispute had been definitely settled."
-      ],
-      "moral": "The strong are apt to settle questions to their own advantage.",
-      "characters": []
-    },
-
-    {
-      "number": "65",
-      "title": "The Bear and the Bees",
-      "story":[
-        "A Bear roaming the woods in search of berries happened on a fallen tree in which a swarm of Bees had stored their honey.",
-        "The Bear began to nose around the log very carefully to find out if the Bees were at home.",
-        "Just then one of the swarm came home from the clover field with a load of sweets.",
-        "Guessing what the Bear was after, the Bee flew at him, stung him sharply and then disappeared into the hollow log.",
-        "The Bear lost his temper in an instant, and sprang upon the log tooth and claw, to destroy the nest.",
-        "But this only brought out the whole swarm.",
-        "The poor Bear had to take to his heels, and he was able to save himself only by diving into a pool of water."
-      ],
-      "moral": "It is wiser to bear a single injury in silence than to provoke thousand by flying into a rage.",
-      "characters": []
-    },
-
-    {
-      "number": "66",
-      "title": "The Fox and the Leopard",
-      "story":[
-        "A Fox and a Leopard, resting lazily after a generous dinner, amused themselves by disputing about their good looks.",
-        "The Leopard was very proud of his glossy, spotted coat and made disdainful remarks about the Fox, whose appearance he declared was quite ordinary.",
-        "The Fox prided himself on his fine bushy tail with its tip of white, but he was wise enough to see that he could not rival the Leopard in looks.",
-        "Still he kept up a flow of sarcastic talk, just to exercise his wits and to have the fun of disputing.",
-        "The Leopard was about to lose his temper when the Fox got up, yawning lazily.",
-        "You may have a very smart coat, he said, but you would be a great deal better off if you had a little more smartness inside your head and less on your ribs, the way I am.",
-        "That's what I call real beauty."
-      ],
-      "moral": "A fine coat is not always an indication of an attractive mind.",
-      "characters": []
-    },
-
-    {
-      "number": "67",
-      "title": "The Heron",
-      "story":[
-        "A Heron was walking sedately along the bank of a stream, his eyes on the clear water, and his long neck and pointed bill ready to snap up a likely morsel for his breakfast.",
-        "The clear water swarmed with fish, but Master Heron was hard to please that morning.",
-        "No small fry for me, he said.",
-        "Such scanty fare is not fit for a Heron.",
-        "Now a fine young Perch swam near.",
-        "No indeed, said the Heron.",
-        "I wouldn't even trouble to open my beak for anything like that!",
-        "As the sun rose, the fish left the shallow water near the shore and swam below into the cool depths toward the middle.",
-        "The Heron saw no more fish, and very glad was he at last to breakfast on a tiny Snail."
-      ],
-      "moral": "Do not be too hard to suit or you may have to be content with the worst or with nothing at all.",
-      "characters": []
-    },
-
-    {
-      "number": "68",
-      "title": "The Cock and the Fox",
-      "story":[
-        "One bright evening as the sun was sinking on a glorious world a wise old Cock flew into a tree to roost.",
-        "Before he composed himself to rest, he flapped his wings three times and crowed loudly.",
-        "But just as he was about to put his head under his wing, his beady eyes caught a flash of red and a glimpse of a long pointed nose, and there just below him stood Master Fox.",
-        "Have you heard the wonderful news? cried the Fox in a very joyful and excited manner.",
-        "What news?, asked the Cock very calmly. But he had a queer, fluttery feeling inside him.",
-        "for, you know, he was very much afraid of the Fox.",
-        "Your family and mine and all other animals have agreed to forget their differences and live in peace and friendship from now on forever.",
-        "Just think of it!, I simply cannot wait to embrace you!",
-        "Do come down, dear friend, and let us celebrate the joyful event.",
-        "How grand!, said the Cock,I certainly am delighted at the news.",
-        "But he spoke in an absent way, and stretching up on tiptoes, seemed to be looking at something afar off.",
-        "What is it you see? ,asked the Fox a little anxiously.",
-        "Why, it looks to me like a couple of Dogs coming this way.",
-        "They must have heard the good news and But the Fox did not wait to hear more.",
-        "Off he started on a run. Wait, cried the Cock.",
-        "Why do you run?,The Dogs are friends of yours now!",
-        "Yes, answered the Fox. But they might not have heard the news.",
-        "Besides, I have a very important errand that I had almost forgotten about.",
-        "The Cock smiled as he buried his head in his feathers and went to sleep, for he had succeeded in outwitting a very crafty enemy."
-      ],
-      "moral": "The trickster is easily tricked.",
-      "characters": []
-    },
-
-    {
-      "number": "69",
-      "title": "The Dog in the Manger",
-      "story":[
-        "A Dog asleep in a manger filled with hay, was awakened by the Cattle, which came in tired and hungry from working in the field.",
-        "But the Dog would not let them get near the manger, and snarled and snapped as if it were filled with the best of meat and bones, all for himself.",
-        "The Cattle looked at the Dog in disgust. How selfish he is!",
-        "said one. He cannot eat the hay and yet he will not let us eat it who are so hungry for it!",
-        "Now the farmer came in.",
-        "When he saw how the Dog was acting, he seized a stick and drove him out of the stable with many a blow for his selfish behavior."
-      ],
-      "moral": "Do not grudge others what you cannot enjoy yourself.",
-      "characters": []
+        "number": "49",
+        "title": "The Travelers and the Sea",
+        "story":[
+          "Two Travelers were walking along the seashore, Far out they saw something riding on the waves.",
+          "Look, said one, a great ship rides in from distant lands, bearing rich treasures!",
+          "The object they saw came ever nearer the shore.",
+          "No, said the other, that is not a treasure ship.",
+          "That is some fisherman's skiff, with the day's catch of savoury fish.",
+          "Still nearer came the object. The waves washed it up on shore.",
+          "It is a chest of gold lost from some wreck, they cried.",
+          "Both Travelers rushed to the beach, but there they found nothing but a water-soaked log."
+        ],
+        "moral": "Do not let your hopes carry you away from reality.",
+        "characters": [
+          "The Fox", "The Stork"
+        ],
+        "character_sentiment": {
+          "The Fox": -1,
+          "The Stork": 1                           
+        }
     },
 
 
     {
-      "number": "70",
-      "title": "The Wolf and the Goat",
-      "story":[
-        "A hungry Wolf spied a Goat browsing at the top of a steep cliff where he could not possibly get at her.",
-        "That is a very dangerous place for you, he called out, pretending to be very anxious about the Goat's safety.",
-        "What if you should fall! Please listen to me and come down!",
-        "Here you can get all you want of the finest, tenderest grass in the country.",
-        "The Goat looked over the edge of the cliff.",
-        "How very, very anxious you are about me, she said, and how generous you are with your grass!",
-        "But I know you!, It's your own appetite you are thinking of, not mine!"
-      ],
-      "moral": "An invitation prompted by selfishness is not to be accepted.",
-      "characters": []
+        "number": "50",
+        "title": "The Wolf and the Lion",
+        "story":[
+          "A Wolf had stolen a Lamb and was carrying it off to his lair to eat it.",
+          "But his plans were very much changed when he met a Lion, who, without making any excuses, took the Lamb away from him.",
+          "The Wolf made off to a safe distance, and then said in a much injured tone: You have no right to take my property like that!",
+          "The Lion looked back, but as the Wolf was too far away to be taught a lesson without too much inconvenience, he said: Your property?",
+          "Did you buy it, or did the Shepherd make you a gift of it?, Pray tell me, how did you get it?"
+        ],
+        "moral": "What is evil won is evil lost.",
+        "characters": [
+          "The Wolf", "The Lamb", "The Lion", "The Shepherd"
+        ],
+        "character_sentiment": {
+          "The Wolf": -1,
+          "The Lamb": 0,
+          "The Lion": -1,
+          "The Shepherd": 0                        
+        }
     },
 
     {
-      "number": "71",
-      "title": "The Ass and the Grasshoppers",
-      "story":[
-        "One day as an Ass was walking in the pasture, he found some Grasshoppers chirping merrily in a grassy corner of the field.",
-        "He listened with a great deal of admiration to the song of the Grasshoppers.",
-        "It was such a joyful song that his pleasure-loving heart was filled with a wish to sing as they did.",
-        "What is it?, he asked very respectfully, that has given you such beautiful voices?",
-        "Is there any special food you eat, or is it some divine nectar that makes you sing so wonderfully?",
-        "Yes, said the Grasshoppers, who were very fond of a joke; it is the dew we drink!",
-        "Try some and see. So thereafter the Ass would eat nothing and drink nothing but dew.",
-        "Naturally, the poor foolish Ass soon died."
-      ],
-      "moral": "The laws of nature are unchangeable.",
-      "characters": []
+        "number": "51",
+        "title": "The Stag and His Reflection",
+        "story":[
+          "A Stag, drinking from a crystal spring, saw himself mirrored in the clear water.",
+          "He greatly admired the graceful arch of his antlers, but he was very much ashamed of his spindling legs.",
+          "How can it be, he sighed, that I should be cursed with such legs when I have so magnificent a crown.",
+          "At that moment he scented a panther and in an instant was bounding away through the forest.",
+          "But as he ran his wide-spreading antlers caught in the branches of the trees, and soon the Panther overtook him.",
+          "Then the Stag perceived that the legs of which he was so ashamed would have saved him had it not been for the useless ornaments on his head."
+        ],
+        "moral": "We often make much of the ornamental and despise the useful.",
+        "characters": [
+          "The Stag", "The Panther"
+        ],
+        "character_sentiment": {
+          "The Stag": 0,
+          "The Panther": 0   
+        }
     },
 
     {
-      "number": "72",
-      "title": "The Mule",
-      "story":[
-        "A Mule had had a long rest and much good feeding.",
-        "He was feeling very vigorous indeed, and pranced around loftily, holding his head high.",
-        "My father certainly was a full-blooded racer, he said.",
-        "I can feel that distinctly. Next day he was put into harness again and that evening he was very downhearted indeed.",
-        "I was mistaken, he said.",
-        "My father was an Ass after all."
-      ],
-      "moral": "Be sure of your pedigree before you boast of it.",
-      "characters": []
+        "number": "52",
+        "title": "The Peacock",
+        "story":[
+          "The Peacock, they say, did not at first have the beautiful feathers in which he now takes so much pride.",
+          "These, Juno, whose favorite he was, granted to him one day when he begged her for a train of feathers to distinguish him from the other birds.",
+          "Then, decked in his finery, gleaming with emerald, gold, purple, and azure, he strutted proudly among the birds.",
+          "All regarded him with envy. Even the most beautiful pheasant could see that his beauty was surpassed.",
+          "Presently the Peacock saw an Eagle soaring high up in the blue sky and felt a desire to fly, as he had been accustomed to do.",
+          "Lifting his wings he tried to rise from the ground.",
+          "But the weight of his magnificent train held him down.",
+          "Instead of flying up to greet the first rays of the morning sun or to bathe in the rosy light among the floating clouds at sunset, he would have to walk the ground more encumbered and oppressed than any common barnyard fowl."
+        ],
+        "moral": "Do not sacrifice your freedom for the sake of pomp and show.",
+        "characters": [
+          "The Peacock", "The Eagle", "the birds"
+        ],
+        "character_sentiment": {
+          "The Peacock": 0,
+          "The Eagle": 0,
+          "the birds Eagle": -1   
+        }
     },
 
     {
-      "number": "73",
-      "title": "The Fox and the Goat",
-      "story":[
-        "A Fox fell into a well, and though it was not very deep, he found that he could not get out again.",
-        "After he had been in the well a long time, a thirsty Goat came by.",
-        "The Goat thought the Fox had gone down to drink, and so he asked if the water was good.",
-        "The finest in the whole country, said the crafty Fox, jump in and try it, There is more than enough for both of us.",
-        "The thirsty Goat immediately jumped in and began to drink.",
-        "The Fox just as quickly jumped on the Goat's back and leaped from the tip of the Goat's horns out of the well.",
-        "The foolish Goat now saw what a plight he had got into, and begged the Fox to help him out.",
-        "But the Fox was already on his way to the woods.",
-        "If you had as much sense as you have beard, old fellow, he said as he ran, you would have been more cautious about finding a way to get out again before you jumped in."
-      ],
-      "moral": "Look before you leap.",
-      "characters": []
+        "number": "53",
+        "title": "The Mice and the Weasels",
+        "story":[
+          "The Weasels and the Mice were always up in arms against each other.",
+          "In every battle the Weasels carried off the victory, as well as a large number of the Mice, which they ate for dinner next day.",
+          "In despair the Mice called a council, and there it was decided that the Mouse army was always beaten because it had no leaders.",
+          "So a large number of generals and commanders were appointed from among the most eminent Mice.",
+          "To distinguish themselves from the soldiers in the ranks, the new leaders proudly bound on their heads lofty crests and ornaments of feathers or straw.",
+          "Then after long preparation of the Mouse army in all the arts of war, they sent a challenge to the Weasels.",
+          "The Weasels accepted the challenge with eagerness, for they were always ready for a fight when a meal was in sight.",
+          "They immediately attacked the Mouse army in large numbers.",
+          "Soon the Mouse line gave way before the attack and the whole army fled for cover.",
+          "The privates easily slipped into their holes, but the Mouse leaders could not squeeze through the narrow openings because of their head-dresses.",
+          "Not one escaped the teeth of the hungry Weasels."
+        ],
+        "moral": "Greatness has its penalties.",
+        "characters": [
+          "The Weasels", "The Mice"
+        ],
+        "character_sentiment": {
+          "The Weasels": 0,
+          "The Mice": 0          
+        }
     },
 
     {
-      "number": "74",
-      "title": "The Cat, the Cock, and the Young Mouse",
-      "story":[
-        "A very young Mouse, who had never seen anything of the world, almost came to grief the very first time he ventured out.",
-        "And this is the story he told his mother about his adventures.",
-        "I was strolling along very peaceably when, just as I turned the corner into the next yard, I saw two strange creatures.",
-        "One of them had a very kind and gracious look, but the other was the most fearful monster you can imagine.",
-        "You should have seen him, On top of his head and in front of his neck hung pieces of raw red meat.",
-        "He walked about restlessly, tearing up the ground with his toes, and beating his arms savagely against his sides.",
-        "The moment he caught sight of me he opened his pointed mouth as if to swallow me, and then he let out a piercing roar that frightened me almost to death.",
-        "Can you guess who it was that our young Mouse was trying to describe to his mother?",
-        "It was nobody but the Barnyard Cock and the first one the little Mouse had ever seen.",
-        "If it had not been for that terrible monster, the Mouse went on, I should have made the acquaintance of the pretty creature, who looked so good and gentle.",
-        "He had thick, velvety fur, a meek face, and a look that was very modest, though his eyes were bright and shining.",
-        "As he looked at me he waved his fine long tail and smiled.",
-        "I am sure he was just about to speak to me when the monster I have told you about let out a screaming yell, and I ran for my life.",
-        "My son, said the Mother Mouse, that gentle creature you saw was none other than the Cat.",
-        "Under his kindly appearance, he bears a grudge against every one of us.", "The other was nothing but a bird who wouldn't harm you in the least.",
-        "As for the Cat, he eats us. So be thankful, my child, that you escaped with your life, and, as long as you live, never judge people by their looks."
-      ],
-      "moral": "Do not trust alone to outward appearances.",
-      "characters": []
+        "number": "54",
+        "title": "The Wolf and the Lean Dog",
+        "story":[
+          "A Wolf prowling near a village one evening met a Dog.",
+          "It happened to be a very lean and bony Dog, and Master Wolf would have turned up his nose at such meager fare had he not been more hungry than usual.",
+          "So he began to edge toward the Dog, while the Dog backed away.",
+          "Let me remind your lordship, said the Dog, his words interrupted now and then as he dodged a snap of the Wolf's teeth, how unpleasant it would be to eat me now.",
+          "Look at my ribs. I am nothing but skin and bone. But let me tell you something in private.",
+          "In a few days my master will give a wedding feast for his only daughter.",
+          "You can guess how fine and fat I will grow on the scraps from the table.",
+          "Then is the time to eat me. The Wolf could not help thinking how nice it would be to have a fine fat Dog to eat instead of the scrawny object before him.",
+          "So he went away pulling in his belt and promising to return.",
+          "Some days later the Wolf came back for the promised feast.",
+          "He found the Dog in his master's yard, and asked him to come out and be eaten.",
+          "Sir, said the Dog, with a grin, I shall be delighted to have you eat me.",
+          "I'll be out as soon as the porter opens the door.",
+          "But the porter was a huge Dog whom the Wolf knew by painful experience to be very unkind toward wolves.",
+          "So he decided not to wait and made off as fast as his legs could carry him."
+        ],
+        "moral": "Do not depend on the promises of those whose interest it is to deceive you.",
+        "characters": [
+          "The Wolf", "The Dog"
+        ],
+        "character_sentiment": {
+          "The Wolf": 0,
+          "The Dog": -1          
+        }
     },
 
     {
-      "number": "75",
-      "title": "The Wolf and the Shepherd",
-      "story":[
-        "A Wolf had been prowling around a flock of Sheep for a long time, and the Shepherd watched very anxiously to prevent him from carrying off a Lamb.",
-        "But the Wolf did not try to do any harm. Instead he seemed to be helping the Shepherd take care of the Sheep.",
-        "At last the Shepherd got so used to seeing the Wolf about that he forgot how wicked he could be.",
-        "One day he even went so far as to leave his flock in the Wolf's care while he went on an errand.",
-        "But when he came back and saw how many of the flock had been killed and carried off, he knew how foolish to trust a Wolf."
-      ],
-      "moral": "Once a wolf, always a wolf.",
-      "characters": []
+        "number": "55",
+        "title": "The Fox and the Lion",
+        "story":[
+          "A very young Fox, who had never before seen a Lion, happened to meet one in the forest.",
+          "A single look was enough to send the Fox off at top speed for the nearest hiding place.",
+          "The second time the Fox saw the Lion he stopped behind a tree to look at him a moment before slinking away.",
+          "But the third time, the Fox went boldly up to the Lion and, without turning a hair, said, Hello, there, old top."
+        ],
+        "moral": "Acquaintance with evil blinds us to its dangers.",
+        "characters": [
+          "The Fox", "The Lion"
+        ],
+        "character_sentiment": {
+          "The Fox": 0,
+          "The Lion": 0          
+        }
     },
 
     {
-      "number": "76",
-      "title": "The Peacock and the Crane",
-      "story":[
-        "A Peacock, puffed up with vanity, met a Crane one day, and to impress him spread his gorgeous tail in the Sun.",
-        "Look, he said, What have you to compare with this?",
-        "I am dressed in all the glory of the rainbow, while your feathers are gray as dust!",
-        "The Crane spread his broad wings and flew up toward the sun.",
-        "Follow me if you can, he said, But the Peacock stood where he was among the birds of the barnyard, while the Crane soared in freedom far up into the blue sky."
-      ],
-      "moral": "The useful is of much more importance and value, than the ornamental.",
-      "characters": []
+        "number": "56",
+        "title": "The Lion and the Ass",
+        "story":[
+          "A Lion and an Ass agreed to go hunting together.",
+          "In their search for game the hunters saw a number of Wild Goats run into a cave, and laid plans to catch them.",
+          "The Ass was to go into the cave and drive the Goats out, while the Lion would stand at the entrance to strike them down.",
+          "The plan worked beautifully. The Ass made such a frightful din in the cave, kicking and braying with all his might, that the Goats came running out in a panic of fear, only to fall victim to the Lion.",
+          "The Ass came proudly out of the cave.",
+          "Did you see how I made them run?,he said.",
+          "Yes, indeed, answered the Lion, and if I had not known you and your kind I should certainly have run, too."
+        ],
+        "moral": "The loud-mouthed boaster does not impress nor frighten those who know him.",
+        "characters": [
+          "The Lion", "The Ass"
+        ],
+        "character_sentiment": {
+          "The Lion": 0,
+          "The Ass": 0          
+        }
     },
 
     {
-      "number": "77",
-      "title": "The Farmer and the Cranes",
-      "story":[
-        "Some Cranes saw a farmer plowing a large field.",
-        "When the work of plowing was done, they patiently watched him sow the seed.",
-        "It was their feast, they thought.",
-        "So, as soon as the Farmer had finished planting and had gone home, down they flew to the field, and began to eat as fast as they could.",
-        "The Farmer, of course, knew the Cranes and their ways.",
-        "He had had experience with such birds before.",
-        "He soon returned to the field with a sling.",
-        "But he did not bring any stones with him.",
-        "He expected to scare the Cranes just by swinging the sling in the air, and shouting loudly at them.",
-        "At first the Cranes flew away in great terror.",
-        "But they soon began to see that none of them ever got hurt.",
-        "They did not even hear the noise of stones whizzing through the air, and as for words, they would kill nobody.",
-        "At last they paid no attention whatever to the Farmer.",
-        "The Farmer saw that he would have to take other measures.",
-        "He wanted to save at least some of his grain.",
-        "So he loaded his sling with stones and killed several of the Cranes.",
-        "This had the effect the Farmer wanted, for from that day the Cranes visited his field no more."
-      ],
-      "moral": "Bluff and threatening words are of little value with rascals.",
-      "characters": []
+        "number": "57",
+        "title": "The Dog and His Master's Dinner",
+        "story":[
+          "A Dog had learned to carry his master's dinner to him every day.",
+          "He was very faithful to his duty, though the smell of the good things in the basket tempted him.",
+          "The Dogs in the neighborhood noticed him carrying the basket and soon discovered what was in it.",
+          "They made several attempts to steal it from him.",
+          "But he always guarded it faithfully.",
+          "Then one day all the Dogs in the neighborhood got together and met him on his way with the basket.",
+          "The Dog tried to run away from them.",
+          "But at last he stopped to argue.",
+          "That was his mistake.",
+          "They soon made him feel so ridiculous that he dropped the basket and seized a large piece of roast meat intended for his master's dinner.",
+          "Very well, he said, you divide the rest."
+        ],
+        "moral": "Do not stop to argue with temptation.",
+        "characters": [
+          "The Dog", "The Dogs"
+        ],
+        "character_sentiment": {
+          "The Lion": 1,
+          "The Dogs": -1          
+        }
     },
 
     {
-      "number": "78",
-      "title": "The Farmer and His Sons",
-      "story":[
-        "A rich old farmer, who felt that he had not many more days to live, called his sons to his bedside.",
-        "My sons, he said, heed what I have to say to you.",
-        "Do not on any account part with the estate that has belonged to our family for so many generations.",
-        "Somewhere on it is hidden a rich treasure.",
-        "I do not know the exact spot, but it is there, and you will surely find it.",
-        "Spare no energy and leave no spot unturned in your search.",
-        "The father died, and no sooner was he in his grave than the sons set to work digging with all their might, turning up every foot of ground with their spades, and going over the whole farm two or three times.",
-        "No hidden gold did they find; but at harvest time when they had settled their accounts and had pocketed a rich profit far greater than that of any of their neighbors, they understood that the treasure their father had told them about was the wealth of a bountiful crop, and that in their industry had they found the treasure."
-      ],
-      "moral": "Industry is itself a treasure.",
-      "characters": []
+        "number": "58",
+        "title": "The Vain Jackdaw and his Borrowed Feathers",
+        "story":[
+          "A Jackdaw chanced to fly over the garden of the King's palace.",
+          "There he saw with much wonder and envy a flock of royal Peacocks in all the glory of their splendid plumage.",
+          "Now the black Jackdaw was not a very handsome bird, nor very refined in manner.",
+          "Yet he imagined that all he needed to make himself fit for the society of the Peacocks was a dress like theirs.",
+          "So he picked up some castoff feathers of the Peacocks and stuck them among his own black plumes.",
+          "Dressed in his borrowed finery he strutted loftily among the birds of his own kind.",
+          "Then he flew down into the garden among the Peacocks.",
+          "But they soon saw who he was.",
+          "Angry at the cheat, they flew at him, plucking away the borrowed feathers and also some of his own.",
+          "The poor Jackdaw returned sadly to his former companions.",
+          "There another unpleasant surprise awaited him.",
+          "They had not forgotten his superior airs toward them, and, to punish him, they drove him away with a rain of pecks and jeers."
+        ],
+        "moral": "Borrowed feathers do not make fine birds.",
+        "characters": [
+          "The Jackdaw", "The Peacocks"
+        ],
+        "character_sentiment": {
+          "The Jackdaw": -1,
+          "The Peacocks": 0
+        }
     },
 
     {
-      "number": "79",
-      "title": "The Two Pots",
-      "story":[
-        "Two Pots, one of brass and the other of clay, stood together on the hearthstone.",
-        "One day the Brass Pot proposed to the Earthen Pot that they go out into the world together.",
-        "But the Earthen Pot excused himself, saying that it would be wiser for him to stay in the corner by the fire.",
-        "It would take so little to break me, he said, You know how fragile I am.",
-        "The least shock is sure to shatter me!",
-        "Don't let that keep you at home, urged the Brass Pot.",
-        "I shall take very good care of you.",
-        "If we should happen to meet anything hard I will step between and save you.",
-        "So the Earthen Pot at last consented, and the two set out side by side, jolting along on three stubby legs first to this side, then to that, and bumping into each other at every step.",
-        "The Earthen Pot could not survive that sort of companionship very long.",
-        "They had not gone ten paces before the Earthen Pot cracked, and at the next jolt he flew into a thousand pieces."
-      ],
-      "moral": "Equals make the best friends.",
-      "characters": []
+        "number": "59",
+        "title": "The Monkey and the Dolphin",
+        "story":[
+          "It happened once upon a time that a certain Greek ship bound for Athens was wrecked off the coast close to Piraeus, the port of Athens.",
+          "Had it not been for the Dolphins, who at that time were very friendly toward mankind and especially toward Athenians, all would have perished.",
+          "But the Dolphins took the shipwrecked people on their backs and swam with them to shore.",
+          "Now it was the custom among the Greeks to take their pet monkeys and dogs with them whenever they went on a voyage.",
+          "So when one of the Dolphins saw a Monkey struggling in the water, he thought it was a man, and made the Monkey climb up on his back.",
+          "Then off he swam with him toward the shore.",
+          "The Monkey sat up, grave and dignified, on the Dolphin's back.",
+          "You are a citizen of illustrious Athens, are you not?, asked the Dolphin politely.",
+          "Yes, answered the Monkey, proudly. My family is one of the noblest in the city.",
+          "Indeed, said the Dolphin. Then of course you often visit Piraeus.",
+          "Yes, yes, replied the Monkey.Indeed, I do. I am with him constantly.",
+          "Piraeus is my very best friend.",
+          "This answer took the Dolphin by surprise, and, turning his head, he now saw what it was he was carrying.",
+          "Without more ado, he dived and left the foolish Monkey to take care of himself, while he swam off in search of some human being to save."
+        ],
+        "moral": "One falsehood leads to another.",
+        "characters": [
+          "The Dolphins", "The Monkey"
+        ],
+        "character_sentiment": {
+          "The Dolphins": 1,
+          "The Monkey": -1
+        }
     },
 
     {
-      "number": "80",
-      "title": "The Goose and the Golden Egg",
-      "story":[
-        "There was once a Countryman who possessed the most wonderful Goose you can imagine, for every day when he visited the nest, the Goose had laid a beautiful, glittering, golden egg.",
-        "The Countryman took the eggs to market and soon began to get rich.",
-        "But it was not long before he grew impatient with the Goose because she gave him only a single golden egg a day.",
-        "He was not getting rich fast enough.",
-        "Then one day, after he had finished counting his money, the idea came to him that he could get all the golden eggs at once by killing the Goose and cutting it open.",
-        "But when the deed was done, not a single golden egg did he find, and his precious Goose was dead."
-      ],
-      "moral": "Those who have plenty want more and so lose all they have.",
-      "characters": []
+        "number": "60",
+        "title": "The Wolf and the Ass",
+        "story":[
+          "An Ass was feeding in a pasture near a wood when he saw a Wolf lurking in the shadows along the hedge.",
+          "He easily guessed what the Wolf had in mind, and thought of a plan to save himself.",
+          "So he pretended he was lame, and began to hobble painfully.",
+          "When the Wolf came up, he asked the Ass what had made him lame, and the Ass replied that he had stepped on a sharp thorn.",
+          "Please pull it out, he pleaded, groaning as if in pain.",
+          "If you do not, it might stick in your throat when you eat me.",
+          "The Wolf saw the wisdom of the advice, for he wanted to enjoy his meal without any danger of choking.",
+          "So the Ass lifted up his foot and the Wolf began to search very closely and carefully for the thorn.",
+          "Just then the Ass kicked out with all his might, tumbling the Wolf a dozen paces away.",
+          "And while the Wolf was getting very slowly and painfully to his feet, the Ass galloped away in safety.",
+          "Serves me right, growled the Wolf as he crept into the bushes.",
+          "I'm a butcher by trade, not a doctor."
+        ],
+        "moral": "Stick to your trade.",
+        "characters": [
+          "The Ass", "The Wolf"
+        ],
+        "character_sentiment": {
+          "The Ass": -1,
+          "The Wolf": 1
+        }
+    },
+
+    {
+        "number": "61",
+        "title": "The Monkey and the Cat",
+        "story":[
+          "Once upon a time a Cat and a Monkey lived as pets in the same house.",
+          "They were great friends and were constantly in all sorts of mischief together.",
+          "What they seemed to think of more than anything else was to get something to eat, and it did not matter much to them how they got it.",
+          "One day they were sitting by the fire, watching some chestnuts roasting on the hearth.",
+          "How to get them was the question.",
+          "I would gladly get them, said the cunning Monkey, but you are much more skillful at such things than I am.",
+          "Pull them out and I'll divide them between us.",
+          "Pussy stretched out her paw very carefully, pushed aside some of the cinders, and drew back her paw very quickly.",
+          "Then she tried it again, this time pulling a chestnut half out of the fire.",
+          "A third time and she drew out the chestnut.",
+          "This performance she went through several times, each time singeing her paw severely.",
+          "As fast as she pulled the chestnuts out of the fire, the Monkey ate them up.",
+          "Now the master came in, and away scampered the rascals, Mistress Cat with a burnt paw and no chestnuts.",
+          "From that time on, they say, she contented herself with mice and rats and had little to do with Sir Monkey."
+        ],
+        "moral": "The flatterer seeks some benefit at your expense.",
+        "characters": [
+          "The Monkey", "The Cat"
+        ],
+        "character_sentiment": {
+          "The Monkey": -1,
+          "The Cat": 0
+        }
+    },
+
+    {
+        "number": "62",
+        "title": "The Dogs and the Fox",
+        "story":[
+          "Some Dogs found the skin of a Lion and furiously began to tear it with their teeth.",
+          "A Fox chanced to see them and laughed scornfully.",
+          "If that Lion had been alive, he said, it would have been a very different story.",
+          "He would have made you feel how much sharper his claws are than your teeth."
+        ],
+        "moral": "It is easy and also contemptible to kick a man that is down.",
+        "characters": [
+          "The Dogs", "The Lion", "The Fox"
+        ],
+        "character_sentiment": {
+          "The Dogs": 0,
+          "The Lion": 0,
+          "The Fox": 0
+        }
+    },
+
+    {
+        "number": "63",
+        "title": "The Dogs and the Hides",
+        "story":[
+          "Some hungry Dogs saw a number of hides at the bottom of a stream where the Tanner had put them to soak.",
+          "A fine hide makes an excellent meal for a hungry Dog, but the water was deep and the Dogs could not reach the hides from the bank.",
+          "So they held a council and decided that the very best thing to do was to drink up the river.",
+          "All fell to lapping up the water as fast as they could.",
+          "But though they drank and drank until, one after another, all of them had burst with drinking, still, for all their effort, the water in the river remained as high as ever."
+        ],
+        "moral": "Do not try to do impossible things.",
+        "characters": [
+          "The Dogs", "The Tanner"
+        ],
+        "character_sentiment": {
+          "The Dogs": -1,
+          "The Tanner": 0          
+        }
+    },
+
+    {
+        "number": "64",
+        "title": "The Rabbit, the Weasel, and the Cat",
+        "story":[
+          "A Rabbit left his home one day for a dinner of clover.",
+          "But he forgot to latch the door of his house and while he was gone a Weasel walked in and calmly made himself at home.",
+          "When the Rabbit returned, there was the Weasel's nose sticking out of the Rabbit's own doorway, sniffing the fine air.",
+          "The Rabbit was quite angry for a Rabbit, and requested the Weasel to move out.",
+          "But the Weasel was perfectly content. He was settled down for good.",
+          "A wise old Cat heard the dispute and offered to settle it.",
+          "Come close to me, said the Cat, I am very deaf.",
+          "Put your mouths close to my ears while you tell me the facts.",
+          "The unsuspecting pair did as they were told and in an instant the Cat had them both under her claws.",
+          "No one could deny that the dispute had been definitely settled."
+        ],
+        "moral": "The strong are apt to settle questions to their own advantage.",
+        "characters": [
+          "The Rabbit", "The Weasel", "The Cat"
+        ],
+        "character_sentiment": {
+          "The Rabbit": 1,
+          "The Weasel": -1, 
+          "The Cat": -1           
+        }
+    },
+
+    {
+        "number": "65",
+        "title": "The Bear and the Bees",
+        "story":[
+          "A Bear roaming the woods in search of berries happened on a fallen tree in which a swarm of Bees had stored their honey.",
+          "The Bear began to nose around the log very carefully to find out if the Bees were at home.",
+          "Just then one of the swarm came home from the clover field with a load of sweets.",
+          "Guessing what the Bear was after, the Bee flew at him, stung him sharply and then disappeared into the hollow log.",
+          "The Bear lost his temper in an instant, and sprang upon the log tooth and claw, to destroy the nest.",
+          "But this only brought out the whole swarm.",
+          "The poor Bear had to take to his heels, and he was able to save himself only by diving into a pool of water."
+        ],
+        "moral": "It is wiser to bear a single injury in silence than to provoke thousand by flying into a rage.",
+        "characters": [
+          "The Bear", "The Bees"
+        ],
+        "character_sentiment": {
+          "The Bear": 0,
+          "The Bees": 0          
+        }
+    },
+
+    {
+        "number": "66",
+        "title": "The Fox and the Leopard",
+        "story":[
+          "A Fox and a Leopard, resting lazily after a generous dinner, amused themselves by disputing about their good looks.",
+          "The Leopard was very proud of his glossy, spotted coat and made disdainful remarks about the Fox, whose appearance he declared was quite ordinary.",
+          "The Fox prided himself on his fine bushy tail with its tip of white, but he was wise enough to see that he could not rival the Leopard in looks.",
+          "Still he kept up a flow of sarcastic talk, just to exercise his wits and to have the fun of disputing.",
+          "The Leopard was about to lose his temper when the Fox got up, yawning lazily.",
+          "You may have a very smart coat, he said, but you would be a great deal better off if you had a little more smartness inside your head and less on your ribs, the way I am.",
+          "That's what I call real beauty."
+        ],
+        "moral": "A fine coat is not always an indication of an attractive mind.",
+        "characters": [
+          "The Fox", "The Leopard"
+        ],
+        "character_sentiment": {
+          "The Fox": 0,
+          "The Leopard": 0          
+        }
+    },
+
+    {
+        "number": "67",
+        "title": "The Heron",
+        "story":[
+          "A Heron was walking sedately along the bank of a stream, his eyes on the clear water, and his long neck and pointed bill ready to snap up a likely morsel for his breakfast.",
+          "The clear water swarmed with fish, but Master Heron was hard to please that morning.",
+          "No small fry for me, he said.",
+          "Such scanty fare is not fit for a Heron.",
+          "Now a fine young Perch swam near.",
+          "No indeed, said the Heron.",
+          "I wouldn't even trouble to open my beak for anything like that!",
+          "As the sun rose, the fish left the shallow water near the shore and swam below into the cool depths toward the middle.",
+          "The Heron saw no more fish, and very glad was he at last to breakfast on a tiny Snail."
+        ],
+        "moral": "Do not be too hard to suit or you may have to be content with the worst or with nothing at all.",
+        "characters": [
+          "The Heron", "The Perch", "The Snail"
+        ],
+        "character_sentiment": {
+          "The Heron": 0,
+          "The Perch": 0,
+          "The Snail": 0                    
+        }
+    },
+
+    {
+        "number": "68",
+        "title": "The Cock and the Fox",
+        "story":[
+          "One bright evening as the sun was sinking on a glorious world a wise old Cock flew into a tree to roost.",
+          "Before he composed himself to rest, he flapped his wings three times and crowed loudly.",
+          "But just as he was about to put his head under his wing, his beady eyes caught a flash of red and a glimpse of a long pointed nose, and there just below him stood Master Fox.",
+          "Have you heard the wonderful news? cried the Fox in a very joyful and excited manner.",
+          "What news?, asked the Cock very calmly. But he had a queer, fluttery feeling inside him.",
+          "for, you know, he was very much afraid of the Fox.",
+          "Your family and mine and all other animals have agreed to forget their differences and live in peace and friendship from now on forever.",
+          "Just think of it!, I simply cannot wait to embrace you!",
+          "Do come down, dear friend, and let us celebrate the joyful event.",
+          "How grand!, said the Cock,I certainly am delighted at the news.",
+          "But he spoke in an absent way, and stretching up on tiptoes, seemed to be looking at something afar off.",
+          "What is it you see? ,asked the Fox a little anxiously.",
+          "Why, it looks to me like a couple of Dogs coming this way.",
+          "They must have heard the good news and But the Fox did not wait to hear more.",
+          "Off he started on a run. Wait, cried the Cock.",
+          "Why do you run?,The Dogs are friends of yours now!",
+          "Yes, answered the Fox. But they might not have heard the news.",
+          "Besides, I have a very important errand that I had almost forgotten about.",
+          "The Cock smiled as he buried his head in his feathers and went to sleep, for he had succeeded in outwitting a very crafty enemy."
+        ],
+        "moral": "The trickster is easily tricked.",
+        "characters": [
+          "The Cock", "The Fox", "The Dogs"
+        ],
+        "character_sentiment": {
+          "The Cock": 1,
+          "The Fox": -1,
+          "The Dogs": 0                    
+        }
+    },
+
+    {
+        "number": "69",
+        "title": "The Dog in the Manger",
+        "story":[
+          "A Dog asleep in a manger filled with hay, was awakened by the Cattle, which came in tired and hungry from working in the field.",
+          "But the Dog would not let them get near the manger, and snarled and snapped as if it were filled with the best of meat and bones, all for himself.",
+          "The Cattle looked at the Dog in disgust. How selfish he is!",
+          "said one. He cannot eat the hay and yet he will not let us eat it who are so hungry for it!",
+          "Now the farmer came in.",
+          "When he saw how the Dog was acting, he seized a stick and drove him out of the stable with many a blow for his selfish behavior."
+        ],
+        "moral": "Do not grudge others what you cannot enjoy yourself.",
+        "characters": [
+          "The Dog", "The Cattle", "The Farmer"
+        ],
+        "character_sentiment": {
+          "The Dog": -1,
+          "The Cattle": 0,
+          "The Farmer": 1                    
+        }
+    },
+
+
+    {
+        "number": "70",
+        "title": "The Wolf and the Goat",
+        "story":[
+          "A hungry Wolf spied a Goat browsing at the top of a steep cliff where he could not possibly get at her.",
+          "That is a very dangerous place for you, he called out, pretending to be very anxious about the Goat's safety.",
+          "What if you should fall! Please listen to me and come down!",
+          "Here you can get all you want of the finest, tenderest grass in the country.",
+          "The Goat looked over the edge of the cliff.",
+          "How very, very anxious you are about me, she said, and how generous you are with your grass!",
+          "But I know you!, It's your own appetite you are thinking of, not mine!"
+        ],
+        "moral": "An invitation prompted by selfishness is not to be accepted.",
+        "characters": [
+          "The Wolf", "The Goat"
+        ],
+        "character_sentiment": {
+          "The Wolf": -1,
+          "The Goat": 0          
+        }
+    },
+
+    {
+        "number": "71",
+        "title": "The Ass and the Grasshoppers",
+        "story":[
+          "One day as an Ass was walking in the pasture, he found some Grasshoppers chirping merrily in a grassy corner of the field.",
+          "He listened with a great deal of admiration to the song of the Grasshoppers.",
+          "It was such a joyful song that his pleasure-loving heart was filled with a wish to sing as they did.",
+          "What is it?, he asked very respectfully, that has given you such beautiful voices?",
+          "Is there any special food you eat, or is it some divine nectar that makes you sing so wonderfully?",
+          "Yes, said the Grasshoppers, who were very fond of a joke; it is the dew we drink!",
+          "Try some and see. So thereafter the Ass would eat nothing and drink nothing but dew.",
+          "Naturally, the poor foolish Ass soon died."
+        ],
+        "moral": "The laws of nature are unchangeable.",
+        "characters": [
+          "The Ass", "The Grasshoppers"
+        ],
+        "character_sentiment": {
+          "The Ass": 1,
+          "The Grasshoppers": -1
+        }
+    },
+
+    {
+        "number": "72",
+        "title": "The Mule",
+        "story":[
+          "A Mule had had a long rest and much good feeding.",
+          "He was feeling very vigorous indeed, and pranced around loftily, holding his head high.",
+          "My father certainly was a full-blooded racer, he said.",
+          "I can feel that distinctly. Next day he was put into harness again and that evening he was very downhearted indeed.",
+          "I was mistaken, he said.",
+          "My father was an Ass after all."
+        ],
+        "moral": "Be sure of your pedigree before you boast of it.",
+        "characters": [
+            "The Mule"
+        ],
+        "character_sentiment": {
+          "The Mule": 0        
+        }
+    },
+
+    {
+        "number": "73",
+        "title": "The Fox and the Goat",
+        "story":[
+          "A Fox fell into a well, and though it was not very deep, he found that he could not get out again.",
+          "After he had been in the well a long time, a thirsty Goat came by.",
+          "The Goat thought the Fox had gone down to drink, and so he asked if the water was good.",
+          "The finest in the whole country, said the crafty Fox, jump in and try it, There is more than enough for both of us.",
+          "The thirsty Goat immediately jumped in and began to drink.",
+          "The Fox just as quickly jumped on the Goat's back and leaped from the tip of the Goat's horns out of the well.",
+          "The foolish Goat now saw what a plight he had got into, and begged the Fox to help him out.",
+          "But the Fox was already on his way to the woods.",
+          "If you had as much sense as you have beard, old fellow, he said as he ran, you would have been more cautious about finding a way to get out again before you jumped in."
+        ],
+        "moral": "Look before you leap.",
+        "characters": [
+          "The Fox", "The Goat"
+        ],
+        "character_sentiment": {
+          "The Fox": -1,        
+          "The Goat": -1        
+        }
+    },
+
+    {
+        "number": "74",
+        "title": "The Cat, the Cock, and the Young Mouse",
+        "story":[
+          "A very young Mouse, who had never seen anything of the world, almost came to grief the very first time he ventured out.",
+          "And this is the story he told his mother about his adventures.",
+          "I was strolling along very peaceably when, just as I turned the corner into the next yard, I saw two strange creatures.",
+          "One of them had a very kind and gracious look, but the other was the most fearful monster you can imagine.",
+          "You should have seen him, On top of his head and in front of his neck hung pieces of raw red meat.",
+          "He walked about restlessly, tearing up the ground with his toes, and beating his arms savagely against his sides.",
+          "The moment he caught sight of me he opened his pointed mouth as if to swallow me, and then he let out a piercing roar that frightened me almost to death.",
+          "Can you guess who it was that our young Mouse was trying to describe to his mother?",
+          "It was nobody but the Barnyard Cock and the first one the little Mouse had ever seen.",
+          "If it had not been for that terrible monster, the Mouse went on, I should have made the acquaintance of the pretty creature, who looked so good and gentle.",
+          "He had thick, velvety fur, a meek face, and a look that was very modest, though his eyes were bright and shining.",
+          "As he looked at me he waved his fine long tail and smiled.",
+          "I am sure he was just about to speak to me when the monster I have told you about let out a screaming yell, and I ran for my life.",
+          "My son, said the Mother Mouse, that gentle creature you saw was none other than the Cat.",
+          "Under his kindly appearance, he bears a grudge against every one of us.",
+          "The other was nothing but a bird who wouldn't harm you in the least.",
+          "As for the Cat, he eats us. So be thankful, my child, that you escaped with your life, and, as long as you live, never judge people by their looks."
+        ],
+        "moral": "Do not trust alone to outward appearances.",
+        "characters": [
+            "The Mouse", "The Cock", "The Cat", "The Mother Mouse"
+        ],
+        "character_sentiment": {
+          "The Mouse": 0,        
+          "The Mother Mouse": 1,
+          "The Cock": 0,        
+          "The Cat": -1        
+        }
+    },
+
+    {
+        "number": "75",
+        "title": "The Wolf and the Shepherd",
+        "story":[
+          "A Wolf had been prowling around a flock of Sheep for a long time, and the Shepherd watched very anxiously to prevent him from carrying off a Lamb.",
+          "But the Wolf did not try to do any harm. Instead he seemed to be helping the Shepherd take care of the Sheep.",
+          "At last the Shepherd got so used to seeing the Wolf about that he forgot how wicked he could be.",
+          "One day he even went so far as to leave his flock in the Wolf's care while he went on an errand.",
+          "But when he came back and saw how many of the flock had been killed and carried off, he knew how foolish to trust a Wolf."
+        ],
+        "moral": "Once a wolf, always a wolf.",
+        "characters": [
+            "The Wolf", "The Sheep", "The Shepherd"
+        ],
+        "character_sentiment": {
+          "The Wolf": -1,        
+          "The Sheep": 0,
+          "The Shepherd": 0          
+        }
+    },
+
+    {
+        "number": "76",
+        "title": "The Peacock and the Crane",
+        "story":[
+          "A Peacock, puffed up with vanity, met a Crane one day, and to impress him spread his gorgeous tail in the Sun.",
+          "Look, he said, What have you to compare with this?",
+          "I am dressed in all the glory of the rainbow, while your feathers are gray as dust!",
+          "The Crane spread his broad wings and flew up toward the sun.",
+          "Follow me if you can, he said, But the Peacock stood where he was among the birds of the barnyard, while the Crane soared in freedom far up into the blue sky."
+        ],
+        "moral": "The useful is of much more importance and value, than the ornamental.",
+        "characters": [
+            "The Peacock", "The Crane"
+        ],
+        "character_sentiment": {
+          "The Peacock": 0,        
+          "The Crane": 0                  
+        }
+    },
+
+    {
+        "number": "77",
+        "title": "The Farmer and the Cranes",
+        "story":[
+          "Some Cranes saw a farmer plowing a large field.",
+          "When the work of plowing was done, they patiently watched him sow the seed.",
+          "It was their feast, they thought.",
+          "So, as soon as the Farmer had finished planting and had gone home, down they flew to the field, and began to eat as fast as they could.",
+          "The Farmer, of course, knew the Cranes and their ways.",
+          "He had had experience with such birds before.",
+          "He soon returned to the field with a sling.",
+          "But he did not bring any stones with him.",
+          "He expected to scare the Cranes just by swinging the sling in the air, and shouting loudly at them.",
+          "At first the Cranes flew away in great terror.",
+          "But they soon began to see that none of them ever got hurt.",
+          "They did not even hear the noise of stones whizzing through the air, and as for words, they would kill nobody.",
+          "At last they paid no attention whatever to the Farmer.",
+          "The Farmer saw that he would have to take other measures.",
+          "He wanted to save at least some of his grain.",
+          "So he loaded his sling with stones and killed several of the Cranes.",
+          "This had the effect the Farmer wanted, for from that day the Cranes visited his field no more."
+        ],
+        "moral": "Bluff and threatening words are of little value with rascals.",
+        "characters": [
+            "The Cranes", "The Farmer"
+        ],
+        "character_sentiment": {
+          "The Cranes": -1,        
+          "The Farmer": 1                  
+        }
+    },
+
+    {
+        "number": "78",
+        "title": "The Farmer and His Sons",
+        "story":[
+          "A rich old farmer, who felt that he had not many more days to live, called his sons to his bedside.",
+          "My sons, he said, heed what I have to say to you.",
+          "Do not on any account part with the estate that has belonged to our family for so many generations.",
+          "Somewhere on it is hidden a rich treasure.",
+          "I do not know the exact spot, but it is there, and you will surely find it.",
+          "Spare no energy and leave no spot unturned in your search.",
+          "The father died, and no sooner was he in his grave than the sons set to work digging with all their might, turning up every foot of ground with their spades, and going over the whole farm two or three times.",
+          "No hidden gold did they find; but at harvest time when they had settled their accounts and had pocketed a rich profit far greater than that of any of their neighbors, they understood that the treasure their father had told them about was the wealth of a bountiful crop, and that in their industry had they found the treasure."
+        ],
+        "moral": "Industry is itself a treasure.",
+        "characters": [
+            "The Farmer"
+        ],
+        "character_sentiment": {
+          "The Farmer": 1               
+        }
+    },
+
+    {
+        "number": "79",
+        "title": "The Two Pots",
+        "story":[
+          "Two Pots, one of brass and the other of clay, stood together on the hearthstone.",
+          "One day the Brass Pot proposed to the Earthen Pot that they go out into the world together.",
+          "But the Earthen Pot excused himself, saying that it would be wiser for him to stay in the corner by the fire.",
+          "It would take so little to break me, he said, You know how fragile I am.",
+          "The least shock is sure to shatter me!",
+          "Don't let that keep you at home, urged the Brass Pot.",
+          "I shall take very good care of you.",
+          "If we should happen to meet anything hard I will step between and save you.",
+          "So the Earthen Pot at last consented, and the two set out side by side, jolting along on three stubby legs first to this side, then to that, and bumping into each other at every step.",
+          "The Earthen Pot could not survive that sort of companionship very long.",
+          "They had not gone ten paces before the Earthen Pot cracked, and at the next jolt he flew into a thousand pieces."
+        ],
+        "moral": "Equals make the best friends.",
+        "characters": [
+            "The Brass Pot", "The Earthen Pot"
+        ],
+        "character_sentiment": {
+          "The Brass Pot": 0,               
+          "The Earthen Pot": 0
+        }
+    },
+
+    {
+        "number": "80",
+        "title": "The Goose and the Golden Egg",
+        "story":[
+          "There was once a Countryman who possessed the most wonderful Goose you can imagine, for every day when he visited the nest, the Goose had laid a beautiful, glittering, golden egg.",
+          "The Countryman took the eggs to market and soon began to get rich.",
+          "But it was not long before he grew impatient with the Goose because she gave him only a single golden egg a day.",
+          "He was not getting rich fast enough.",
+          "Then one day, after he had finished counting his money, the idea came to him that he could get all the golden eggs at once by killing the Goose and cutting it open.",
+          "But when the deed was done, not a single golden egg did he find, and his precious Goose was dead."
+        ],
+        "moral": "Those who have plenty want more and so lose all they have.",
+        "characters": [
+            "The Countryman", "The Goose"
+        ],
+        "character_sentiment": {
+          "The Countryman": -1,               
+          "The Goose": 1
+        }
     },
 
     {
