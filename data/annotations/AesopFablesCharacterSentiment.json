@@ -1182,7 +1182,7 @@
         "character_sentiment": {
           "The Wold": -1,
           "The Bear": 0,
-          "The Sheep": 1,                                    
+          "The Sheep": 1                                    
         }
     },
 
@@ -2030,7 +2030,14 @@
         "The beaten Bull was driven to the marsh, where his great hoofs crushed the Frogs to death."
       ],
       "moral": "When the great fall out, the weak must suffer for it.",
-      "characters": []
+      "characters": [
+          "The Bull", "The Old Frog", "The Young Frog"
+        ],
+      "character_sentiment": {
+        "The Bull": -1,
+        "The Old Frog": 0,
+		    "The Young Frog": 0
+      }
     },
 
     {
@@ -2053,7 +2060,13 @@
         "And that was all the sympathy the poor Mouse got."
       ],
       "moral": "Greediness leads to misfortune.",
-      "characters": []
+      "characters": [
+          "The Mouse", "The Weasel"
+        ],
+      "character_sentiment": {
+        "The Mouse": 0,
+        "The Weasel": 0       
+      }
     },
 
     {
@@ -2068,7 +2081,13 @@
         "As he drew his last breath, he said to those standing around: Learn from my fate not to take pity on a scoundrel."
       ],
       "moral": "Learn from my fate not to take pity on a scoundrel.",
-      "characters": []
+		  "characters": [
+          "The Farmer", "The Snake"
+        ],
+      "character_sentiment": {
+        "The Farmer": 1,
+        "The Snake": -1       
+      }
     },
 
     {
@@ -2081,7 +2100,13 @@
         "Of course, they were all hungry, and helped themselves freely to the Stag's food; and as you would expect, the Stag soon starved to death."
       ],
       "moral": "Good will is worth nothing unless it is accompanied by good acts.",
-      "characters": []
+	    "characters": [
+          "The Stag", "The Animals"
+      ],
+      "character_sentiment": {
+        "The Stag": 0,
+        "The Animals": -1       
+      }
     },
 
     {
@@ -2097,7 +2122,13 @@
         "We know how you would treat us later on, if some strangers should come as we did."
       ],
       "moral": "It is unwise to treat old friends badly for the sake of new ones.",
-      "characters": []
+      "characters": [
+          "The Goatherd", "The Wild Goats"
+        ],
+      "character_sentiment": {
+        "The Goatherd": 0,
+        "The Wild Goats": 0       
+      }
     },
 
     {
@@ -2111,7 +2142,13 @@
         "A few days later a change in weather brought a severe frost; and the poor swallow and that foolish young man in his light tunic, and with his arms and knees bare, could scarcely keep life in their shivering bodies."
       ],
       "moral": "One swallow does not make a summer.",
-      "characters": []
+      "characters": [
+          "The Fellow", "The Swallow"
+        ],
+      "character_sentiment": {
+        "The Fellow": 0,
+        "The Swallow": 0       
+      }
     },
 
     {
@@ -2128,7 +2165,13 @@
         "We are very well, thank you, and more so, if you only keep away from here."
       ],
       "moral": "Be wise and shun the quack.",
-      "characters": []
+      "characters": [
+          "The Cat", "The Birds"
+        ],
+      "character_sentiment": {
+        "The Cat": -1,
+        "The Birds": 0       
+      }
     },
 
     {
@@ -2143,7 +2186,13 @@
         "I've learned that all round things are not eggs, he said groaning."
       ],
       "moral": "Act in haste and repent at leisure - and often in pain.",
-      "characters": []
+      "characters": [
+          "The Dog", "The Oyster"
+        ],
+      "character_sentiment": {
+        "The Dog": -1,
+        "The Oyster": 0       
+      }
     },
 
     {
@@ -2161,7 +2210,13 @@
         "What use is it, said another, to read the stars, when you can't see what's right here on the earth?"
       ],
       "moral": "Take care of the little things and the big things will take care of themselves.",
-      "characters": []
+      "characters": [
+          "The Astrologer", "The Villagers"
+        ],
+      "character_sentiment": {
+        "The Astrologer": 0,
+        "The Villagers": 1       
+      }
     },
 
     {
@@ -2177,7 +2232,13 @@
         "It was now an easy matter for the Lion to attack them one at a time, and this he proceeded to do with the greatest satisfaction and relish."
       ],
       "moral": "In unity is strength.",
-      "characters": []
+      "characters": [
+          "The Lion", "The Bullocks"
+        ],
+      "character_sentiment": {
+        "The Lion": -1,
+        "The Bullocks": 0       
+      }
     },
 
     {
@@ -2212,7 +2273,13 @@
         "And when they returned next day to look for their own axes, they were nowhere to be found."
       ],
       "moral": "Honesty is the best policy.",
-      "characters": []
+      "characters": [
+          "The Woodman", "The Mercury"
+        ],
+      "character_sentiment": {
+        "The Woodman": 1,
+        "The Mercury": 1       
+      }
     },
 
     {
@@ -2233,7 +2300,14 @@
         "Thus at one swoop he had caught both meat and fish for his dinner."
       ],
       "moral": "Those who seek to harm others often come to harm themselves through their own deceit.",
-      "characters": []
+      "characters": [
+          "The Mouse", "The Frog", "The Hawk"
+        ],
+      "character_sentiment": {
+        "The Mouse": 0,
+        "The Frog": -1,
+		    "The Hawk": 0
+      }
     },
 
     {
@@ -2247,7 +2321,13 @@
         "But there a hungry Fox spied him, and in a twinkling, ate him up, both shell and claw."
       ],
       "moral": "Be content with your lot.",
-      "characters": []
+      "characters": [
+          "The Fox", "The Crab"
+        ],
+      "character_sentiment": {
+        "The Fox": -1,
+        "The Crab": 0       
+      }
     },
 
     {
@@ -2269,7 +2349,14 @@
         "Sweeping down, the Eagle seized the poisoned horn from out his savior's hands, and flew away with it to hide it where it could never be found."
       ],
       "moral": "An act of kindness is well repaid.",
-      "characters": []
+      "characters": [
+          "The Serpent", "The Eagle", "The Countryman"
+      ],
+      "character_sentiment": {
+        "The Serpent": -1,
+        "The Eagle": 1,
+		    "The Countryman": 1
+      }
     },
 
     {
@@ -2285,7 +2372,14 @@
         "There the first he laid hands on and killed was the Wolf."
       ],
       "moral": "The evil doer often comes to harm through his own deceit.",
-      "characters": []
+      "characters": [
+          "The Wolf", "The Shepherd", "The Lamb"
+      ],
+      "character_sentiment": {
+        "The Wolf": -1,
+        "The Shepherd": 0,
+	      "The Lamb": 0
+      }
     },
 
     {
@@ -2299,7 +2393,15 @@
         "When that Lion leaves, I'll teach you a lesson you won't forget."
       ],
       "moral": "It is wicked to take advantage of another's distress.",
-      "characters": []
+      "characters": [
+          "The Bull", "The Lion", "The Goat", "The Goatherds"
+      ],
+      "character_sentiment": {
+        "The Bull": 0,
+        "The Lion": 0,
+		    "The Goatherds": 0,
+		    "The Goat": -1
+      }
     },
 
     {
@@ -2317,7 +2419,15 @@
         "And they say that ever after, while the Eagle's eggs lie in the nest in spring, the Beetle still sleeps in the ground.For so Jupiter commanded."
       ],
       "moral": "Even the weakest may find means to avenge a wrong.",
-      "characters": []
+      "characters": [
+          "The Beetle", "The Eagle", "The Jupiter", "The Hare"
+        ],
+      "character_sentiment": {
+        "The Beetle": 1,
+        "The Eagle": -1,
+		    "The Jupiter": 0,
+		    "The Hare": 0
+      }
     },
 
     {
@@ -2335,7 +2445,13 @@
         "Pray tell me, how do your visitors find their way out again?"
       ],
       "moral": "Take warning from the misfortunes of others.",
-      "characters": []
+      "characters": [
+          "The Lion", "The Fox"
+      ],
+      "character_sentiment": {
+        "The Lion": -1,
+        "The Fox": 0       
+      }
     },
 
     {
@@ -2352,7 +2468,15 @@
         "It would have been quite a different scene had a Lion made it!"
       ],
       "moral": "It all depends on the point of view, and who tells the story.",
-      "characters": []
+      "characters": [
+          "The Man", "The Lion", "Heracles", "The Nemean Lion" 
+        ],
+      "character_sentiment": {
+        "The Man": 0,
+        "The Lion": 0,
+		    "Heracles": 0,
+		    "The Nemean Lion":0
+        }
     },
 
     {
@@ -2373,7 +2497,14 @@
         "There they left him to mourn the foolishness that had brought him nothing but a sound beating."
       ],
       "moral": "Behavior that is regarded as agreeable in one is very rude and impertinent in another.",
-      "characters": []
+      "characters": [
+          "The Ass", "The Master", "The Dog"
+      ],
+      "character_sentiment": {
+        "The Ass": 0,
+        "The Master": 0,
+		    "The Dog": 0
+        }
     },
 
     {
@@ -2392,7 +2523,12 @@
         "And all the milk flowed out, and with it vanished butter and eggs and chicks and new dress and all the milkmaid's pride."
       ],
       "moral": "Do not count your chickens before they are hatched.",
-      "characters": []
+      "characters": [
+          "The Milkmaid"
+      ],
+      "character_sentiment": {
+        "The Milkmaid": 0     
+      }
     },
 
     {
@@ -2403,7 +2539,13 @@
         "Aha!, he muttered, What a great shouting and running about there would have been, had they caught me at just the very thing they are doing with so much enjoyment!"
       ],
       "moral": "Men often condemn others for what they see no wrong in doing themselves.",
-      "characters": []
+      "characters": [
+          "The Wolf", "The Shepherd"
+        ],
+      "character_sentiment": {
+        "The Wolf": 0,
+		    "The Shepherd": 0
+      }
     },
 
     {
@@ -2419,7 +2561,13 @@
         "No, said the Goat, that broken horn can speak for itself!"
       ],
       "moral": "Wicked deeds will not stay hid.",
-      "characters": []
+      "characters": [
+          "The Goat", "The Goatherd"
+      ],
+      "character_sentiment": {
+        "The Goat": 0,
+		    "The Goatherd": -1
+      }
     },
 
     {
@@ -2442,7 +2590,14 @@
         "It is worth just as much to you as the treasure you lost!"
       ],
       "moral": "A possession is worth no more than the use we make of it.",
-      "characters": []
+      "characters": [
+          "The Miser", "The Thief", "The passerby"
+        ],
+      "character_sentiment": {
+        "The Miser": 0,
+		    "The Thief": -1,
+		    "The Passerby": 0
+      }
     },
 
     {
@@ -2478,7 +2633,13 @@
         "And away ran the Wolf to the woods."
       ],
       "moral": "There is nothing worth so much as liberty.",
-      "characters": []
+      "characters": [
+          "The Wolf", "The Dog"
+        ],
+      "character_sentiment": {
+        "The Wolf": 0,
+		    "The Dog": 1
+      }
     },
 
     {
@@ -2494,7 +2655,13 @@
         "If you drive them away, another greedy swarm will come and take the little blood I have left."
       ],
       "moral": "Better to bear a lesser evil than to risk a greater in removing it.",
-      "characters": []
+      "characters": [
+          "The Hedgehog", "The Fox"
+      ],
+      "character_sentiment": {
+        "The Hedgehog": 1,
+		    "The Fox": 0
+      }
     },
 
     {
@@ -2521,7 +2688,16 @@
         "And so the Bat escaped with his life a second time."
       ],
       "moral": "Set your sails with the wind.",
-      "characters": []
+      "characters": [
+          "The Bat", "The Weasel", "The Mouse", "The Bird", "The Cat"
+        ],
+      "character_sentiment": {
+        "The Bat": 0,
+		    "The Weasel": -1,
+		    "The Mouse": 0,
+		    "The Bird": 0,
+		    "The Cat": 0
+      }
     },
 
     {
@@ -2537,7 +2713,13 @@
         "Otherwise, I should advise you to try some other profession."
       ],
       "moral": "Those who would mend others, should first mend themselves.",
-      "characters": []
+      "characters": [
+          "The Toad", "The Fox"
+        ],
+      "character_sentiment": {
+        "The Toad": 0,
+		    "The Fox": 0
+      }
     },
 
     {
@@ -2558,7 +2740,13 @@
         "When the poor Fox Without a Tail turned around, there arose such a storm of jeers and hooting, that he saw how useless it was to try any longer to persuade the Foxes to part with their tails."
       ],
       "moral": "Do not listen to the advice of him who seeks to lower you to his own level.",
-      "characters": []
+      "characters": [
+          "The Fox", "The Foxes"
+        ],
+      "character_sentiment": {
+        "The Fox": 0,
+		    "The Foxes": 0
+      }
     },
 
     {
@@ -2572,7 +2760,14 @@
         "Do you want everybody to know what a disgraceful and ill-natured Dog you are?"
       ],
       "moral": "Notoriety is not fame.",
-      "characters": []
+      "characters": [
+          "The Dog", "The Master", "The Acquaintance"
+        ],
+      "character_sentiment": {
+        "The Dog": -1,
+		    "The Master": 0,
+		    "The Acquaintance": 0
+      }
     },
 
     {
@@ -2593,7 +2788,18 @@
         "You can't expect any constancy from me!"
       ],
       "moral": "Do not expect constancy in others if you have none yourself.",
-      "characters": []
+      "characters": [
+          "The Rose", "The Butterfly", "The Geranium", "The Mignonette", "The Honey Bee", "The Bumble Bee", "The Zephyr"
+        ],
+      "character_sentiment": {
+        "The Rose": 0,
+		    "The Butterfly": 0,
+		    "The Geranium": 0,
+		    "The Mignonette": 0,
+		    "The Honey Bee": 0,
+		    "The Bumble Bee": 0,
+		    "The Zephyr": 0
+      }
     },
 
     {
@@ -2617,7 +2823,13 @@
         "The hounds caught him, and soon put an end to the boaster and all his tricks."
       ],
       "moral": "Common sense is always worth more than cunning.",
-      "characters": []
+      "characters": [
+          "The Cat", "The Fox"
+        ],
+      "character_sentiment": {
+        "The Cat": 0,
+		    "The Fox": 0
+      }
     },
 
 
@@ -2629,7 +2841,14 @@
         "Son, said the Boy's mother, when she had comforted him, the next time you come near a Nettle, grasp it firmly, and it will be as soft as silk."
       ],
       "moral": "Whatever you do, do with all your might.",
-      "characters": []
+      "characters": [
+          "The Boy", "The Mother", "The Nettle"
+        ],
+      "character_sentiment": {
+        "The Boy": 0,
+		    "The Nettle": 0,
+		    "The Mother": 1
+      }
     },
 
     {
@@ -2645,7 +2864,15 @@
         "Even a contemptible Ass let fly his heels and brayed his insults in the face of the Lion."
       ],
       "moral": "It is cowardly to attack the defenseless, though he be an enemy.",
-      "characters": []
+      "characters": [
+          "The Lion", "The Boar", "The Bull", "The Ass"
+        ],
+      "character_sentiment": {
+        "The Lion": 0,
+		    "The Boar": -1,
+		    "The Bull": -1,
+		    "The Ass": -1
+      }
     },
 
     {
@@ -2662,7 +2889,13 @@
         "And when the Fox began his performance all over again, so dazed did they become, that they lost their hold on the limb, and fell down one by one to the Fox."
       ],
       "moral": "Too much attention to danger may cause us to fall victims to it.",
-      "characters": []
+      "characters": [
+          "The Fox", "The Pheasants"
+        ],
+      "character_sentiment": {
+        "The Fox": -1,
+		    "The Pheasants": 0
+      }
     },
 
     {
