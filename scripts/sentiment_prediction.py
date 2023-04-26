@@ -5,6 +5,9 @@ import numpy as np
 import spacy
 from spacytextblob.spacytextblob import SpacyTextBlob
 from scipy.special import softmax
+import json
+import os
+from pprint import pprint
 
 class SentimentPrediction: 
 
@@ -29,11 +32,12 @@ class SentimentAfinn(SentimentPrediction):
     def __str__(self):
         return "SentimentAfinn"
 
-class SentimentBert(SentimentPrediction): 
+class SentimentRoBERTa(SentimentPrediction): 
 
     def __init__(self):
         super().__init__()        
-        self.sentiment_analysis = pipeline("sentiment-analysis",model="bowipawan/bert-sentimental")
+        #self.sentiment_analysis = pipeline("sentiment-analysis",model="bowipawan/bert-sentimental")
+        self.sentiment_analysis = pipeline("sentiment-analysis",model="siebert/sentiment-roberta-large-english")
         self.label_converter = {
             "positive":1,
             "negative":-1,
@@ -47,7 +51,7 @@ class SentimentBert(SentimentPrediction):
         return self.label_converter[inference[0]["label"]]
 
     def __str__(self):
-        return "SentimentBert"
+        return "SentimentRoBERTa"
 
 class SentimentStanza(SentimentPrediction): 
 
@@ -56,10 +60,17 @@ class SentimentStanza(SentimentPrediction):
         self.pipeline = stanza.Pipeline(lang='en', processors='tokenize,sentiment')
 
     def score_sentiment_sentence(self, sentence):
+        #print("sentence: " + str(sentence))
         inference = self.pipeline(sentence)            
-        if len(inference.sentences) > 1:
-            raise Exception("More than one sentence was provided")        
-        return inference.sentences[0].sentiment
+        #if len(inference.sentences) > 1:
+        #    raise Exception("More than one sentence was provided")        
+        stanza_label_converter = {
+            0:-1,
+            1: 0, 
+            2: 1
+        }
+        return np.mean([stanza_label_converter[i.sentiment] for i in inference.sentences])
+        
 
     def __str__(self):
         return "SentimentStanza"
@@ -84,7 +95,7 @@ class SentimentAnsamble(SentimentPrediction):
     def __init__(self):
         super().__init__()        
         self.models = [
-            SentimentBert(),
+            SentimentRoBERTa(),
             SentimentAfinn(),
             SentimentStanza(),
             SentimentSpacy()
@@ -211,7 +222,7 @@ def test_the_wolf_and_kid_story():
     }
 
     models = [
-        SentimentBert(),
+        SentimentRoBERTa(),
         SentimentAfinn(),
         SentimentStanza(),
         SentimentSpacy(),
@@ -227,5 +238,95 @@ def test_the_wolf_and_kid_story():
         for model in models:
             print(str(model) + ", score: " + str(scores[model])  + ", truth: " + str(story["character_sentiment"][character]))
 
+def load_story_coref(story, path_to_coref):
+    
+    file = "{}.json".format(story['title'].replace(' ', '_'))
+    path_to_file = os.path.join(path_to_coref, file)
+    with open(path_to_file) as json_file:
+        story_coref = json.load(json_file)
+    return story_coref
+
+def load_story_ner(story, path_to_ner):
+    
+    file = "{}.json".format(story['title'].replace(' ', '_'))
+    path_to_file = os.path.join(path_to_ner, file)
+    with open(path_to_file) as json_file:
+        story_ner = json.load(json_file)
+    return story_ner
+
+
+def load_data(path_to_annotations, path_to_coref, path_to_ner):
+
+    with open(path_to_annotations) as json_file:
+        data = json.load(json_file)
+    
+    for idx, _ in enumerate(data['stories']):
+        data['stories'][idx]['story_coref'] = load_story_coref(data['stories'][idx], path_to_coref)
+        data['stories'][idx]['story_ner'] = load_story_ner(data['stories'][idx], path_to_ner)
+        data['stories'][idx]['character_sentences'] = extract_characters_sentences(data['stories'][idx])
+        
+    return data
+
+
+def extract_character_sentences(story, character):
+    sentences = story['story_coref']['coref'].split(".")
+    return list(filter(lambda sentence: character.title() in sentence, sentences))
+
+def extract_characters_sentences(story):
+    return {
+        character: extract_character_sentences(story, character)
+        for character in story['story_ner']['characters']
+    }
+    
+def predict_sentiment_analysis(data):
+    models = [
+        #SentimentRoBERTa(),
+        SentimentAfinn(),
+        SentimentStanza(),
+        SentimentSpacy(),
+        #SentimentAnsamble(),        
+    ]
+    for idx, _ in enumerate(data['stories']):
+        #if idx > 10:
+        #    break
+        data['stories'][idx]['scores'] = {}
+        character_sentences = data['stories'][idx]['character_sentences']
+        for character in character_sentences:
+            
+            #print("")
+            #character_truth = 'The {}'.format(character.title())            
+            #if not character_truth in data['stories'][idx]["character_sentiment"]:
+            #    continue
+            #print("character: " + str(character) + ", character_truth: " + str(character_truth))
+            #pprint(character_sentences[character])
+            scores = {
+                str(model): model.score_sentiment_sentences(character_sentences[character]) for model in models
+            }   
+            data['stories'][idx]['scores'][character] = scores
+            #for model in models:
+            #    print(str(model) + ", score: " + str(scores[model])  + ", truth: " + str(data['stories'][idx]["character_sentiment"][character_truth]))
+        
+    return data
+
+def main():
+    data = load_data(
+        path_to_annotations='../data/annotations/AesopFablesCharacterSentiment.json',
+        path_to_coref='../results/spacy/coref',
+        path_to_ner='../results/spacy/ner',
+    )
+    data = predict_sentiment_analysis(data)
+    store_path = '../results/sentiment/sentiment_prediction.json'
+    if os.path.exists(store_path):
+        os.remove(store_path)
+
+    
+    with open(store_path, 'w') as f:
+        f.write(json.dumps(data,indent=4))
+
 if __name__ == "__main__":
-    test_the_wolf_and_kid_story()
+    
+    main()
+    
+    
+    
+    #test_the_wolf_and_kid_story()
