@@ -2913,7 +2913,11 @@
         "He said, answered the other, that it was not at all wise to keep company with a fellow who would desert his friend in a moment of danger."
       ],
       "moral": "Misfortune is the test of true friendship.",
-      "characters": []
+      "characters": ["Bear", "Two Travelers"],
+      "character_sentiment": {
+        "Bear": 0,
+        "Two Travelers": 0
+      }
     },
 
     {
@@ -2930,7 +2934,11 @@
         "And to save their skins, the Snakes had to look for another home."
       ],
       "moral": "Give a finger and lose a hand.",
-      "characters": []
+      "characters": ["The Porcupine", "The Snakes"],
+      "character_sentiment": {
+        "The Porcupine": -1,
+        "The Snakes": 1
+      }
     },
 
     {
@@ -2949,7 +2957,11 @@
         "Shortly after that, another election among the Animals was held."
       ],
       "moral": "The true leader proves himself by his qualities.",
-      "characters": []
+      "characters": ["The Fox", "The Monkey"],
+          "character_sentiment": {
+        "The Fox": -1,
+        "The Monkey": -1
+      }
     },
 
     {
@@ -2966,7 +2978,12 @@
         "Just then the Father came within sight of the home, and the Wolf was barely able to save himself from the Dogs by a clever bit of running."
       ],
       "moral": "Do not believe everything you hear.",
-      "characters": []
+       "characters": ["The Mother", "The Wolf"],
+          "character_sentiment": {
+        "The Mother": 0,
+        "The Wolf": -1,
+            "The Father": 0
+      }
     },
 
     {
@@ -2983,7 +3000,11 @@
         "And so they died, giving their lives for the sake of a taste of sweetness."
       ],
       "moral": "Be not greedy for a little passing pleasure. It may destroy you.",
-      "characters": []
+      "characters": ["The Flies", "The Honey"],
+          "character_sentiment": {
+        "The Flies": 0,
+        "The Honey": 0
+      }
     },
 
     {
@@ -3005,7 +3026,11 @@
         "To win you I would have said and promised anything, replied the Kite."
       ],
       "moral": "Everything is fair in love.",
-      "characters": []
+       "characters": ["The Eagle", "The Kite"],
+          "character_sentiment": {
+        "The Eagle": 0,
+        "The Kite": -1
+      }
     },
 
     {
@@ -3022,7 +3047,12 @@
         "As for you, you can use your legs so well that I should have little chance of collecting the debt if I had to catch you for it!"
       ],
       "moral": "Two blacks do not make a white.",
-      "characters": []
+      "characters": ["The Stag", "The Sheep", "The Wolf"],
+          "character_sentiment": {
+        "The Stag": -1,
+        "The Sheep": 0,
+            "The Wolf": -1
+      }
     },
 
 
@@ -3061,7 +3091,11 @@
         "Immediately they all fell upon him, the Wolf in the lead, and soon had made an end to him, sacrificing him to the gods then and there, and without the formality of an altar."
       ],
       "moral": "The weak are made to suffer for the misdeeds of the powerful.",
-      "characters": []
+        "characters": ["The Animals", "The Plague"],
+          "character_sentiment": {
+        "The Animals": -1,
+        "The Plague": 0
+      }
     },
 
     {
@@ -3079,7 +3113,11 @@
         "Now I promise you a full-grown Bull, if you but make the thief go away!"
       ],
       "moral": "We are often not so eager for what we seek, after we have found it.",
-      "characters": []
+       "characters": ["The Shepherd", "The Lion"],
+          "character_sentiment": {
+        "The Shepherd": 0,
+        "The Lion": 0
+      }
     },
 
     {
@@ -3094,7 +3132,11 @@
         "At last he managed to scramble out, and as he stood sadly thinking about the good bone he had lost, he realized what a stupid Dog he had been."
       ],
       "moral": "It is very foolish to be greedy.",
-      "characters": []
+        "characters": ["The Dog", "The Reflection"],
+          "character_sentiment": {
+        "The Dog": -1,
+        "The Reflection": 0
+      }
     },
 
     {
@@ -3112,7 +3154,11 @@
         "The Hare now ran his swiftest, but he could not overtake the Tortoise in time."
       ],
       "moral": "The race is not always to the swift.",
-      "characters": []
+       "characters": ["The Hare", "The Tortoise"],
+          "character_sentiment": {
+            "The Hare": -1,
+            "The Tortoise": 0
+          }
     },
 
     {
@@ -3138,7 +3184,11 @@
         "The honey belongs to the Bees."
       ],
       "moral": "Ability proves itself by deeds.",
-      "characters": []
+        "characters": ["The Hare", "The Tortoise"],
+          "character_sentiment": {
+            "The Hare": -1,
+            "The Tortoise": 0
+          }
     },
 
     {
@@ -3163,7 +3213,11 @@
         "There was much fluttering and trying out of wings that afternoon, and at sunrise next day, when the Farmer and his son cut down the grain, they found an empty nest."
       ],
       "moral": "Self-help is the best help.",
-      "characters": []
+        "characters": ["The Lark", "The Young Ones"],
+          "character_sentiment": {
+            "The Lark": 1,
+            "The Young Ones": 0
+          }
     },
 
     {
@@ -3187,7 +3241,11 @@
         "Whatever it is, it is wisest to keep at a safe distance."
       ],
       "moral": "The wise do not let themselves be tricked a second time.",
-      "characters": []
+      "characters": ["The Cat", "The Old Rat"],
+          "character_sentiment": {
+            "The Cat": 0,
+            "The Old Rat": 0
+          }
     },
 
     {
@@ -3211,7 +3269,11 @@
         "Thank you, said Master Fox sweetly, as he walked off Though it is cracked, you have a voice sure enough. But where are your wits?"
       ],
       "moral": "The flatterer lives at the expense of those who will listen to him.",
-      "characters": []
+      "characters": ["The Fox", "The Crow"],
+          "character_sentiment": {
+            "The Fox": -1,
+            "The Crow": 0
+          }
     },
 
     {
@@ -3227,7 +3289,13 @@
         "The two soon came to blows, and while they were fighting, the Ass took to its heels."
       ],
       "moral": "In quarreling about the shadow we often lose the substance.",
-      "characters": []
+      "characters": ["The Ass", "The Shadow", "The Traveler", "The Driver"],
+          "character_sentiment": {
+            "The Ass": 0,
+            "The Shadow": 0,
+            "The Traveler": -1,
+            "The Driver": -1
+          }
     },
 
     {
@@ -3258,7 +3326,12 @@
         "By trying to please everybody, he had pleased nobody, and lost his Ass besides."
       ],
       "moral": "If you try to please all, you please none.",
-      "characters": []
+       "characters": ["The Miller", "The Son", "The Ass"],
+          "character_sentiment": {
+            "The Miller": 0,
+            "The Son": 0,
+            "The Ass": 0
+          }
     },
 
 
@@ -3274,7 +3347,12 @@
         "But just as he cast the stone, the Ant stung him in the heel, so that the pain made him miss his aim, and the startled Dove flew to safety in a distant wood."
       ],
       "moral": "A kindness is never wasted.",
-      "characters": []
+      "characters": ["The Ant", "The Dove",  "The man"],
+      "character_sentiment": {
+            "The Ant": 1,
+            "The Dove": 1,
+            "The man": -1
+          }
     },
 
     {
@@ -3292,11 +3370,15 @@
         "Why do you do that? he asked.",
         "To cool my porridge, replied the Man.",
         "The Satyr sprang hurriedly to his feet and made for the door.",
-        "Goodby, he said, I've seen enough.",
+        "Goodbye, he said, I've seen enough.",
         "A fellow that blows hot and cold in the same breath cannot be friends with me!"
       ],
       "moral": "The man who talks for both sides is not to be trusted by either.",
-      "characters": []
+      "characters": ["The Man", "The Satyr"],
+      "character_sentiment": {
+            "The Man": 0,
+            "The Satyr": -1
+          }
     },
 
     {
@@ -3314,7 +3396,12 @@
         "You can never be too sure, said the Kid, when he saw the Wolf making off to the woods."
       ],
       "moral": "Two sureties are better than one.",
-      "characters": []
+      "characters": ["The Wolf", "The Kid", "The Goat"],
+      "character_sentiment": {
+            "The Wolf": -1,
+            "The Kid": 1,
+            "The Goat": 1
+          }
     },
 
     {
@@ -3328,7 +3415,11 @@
         "Your feathers may do very well in spring, replied the Crow, but I don't remember ever having seen you around in winter, and that's when I enjoy myself most."
       ],
       "moral": "Friends in fine weather only, are not worth much.",
-      "characters": []
+      "characters": ["The Swallow", "The Crow"],
+      "character_sentiment": {
+            "The Swallow": -1,
+            "The Crow": 0
+          }
     },
 
     {
@@ -3345,7 +3436,11 @@
         "Though Jupiter may not give him the prize, I know that he is the prettiest, the sweetest, the dearest darling in the world."
       ],
       "moral": "Mother love is blind.",
-      "characters": []
+      "characters": ["Jupiter", "The Monkey"],
+      "character_sentiment": {
+            "Jupiter": 0,
+            "The Monkey": 1
+          }
     },
 
     {
@@ -3364,7 +3459,12 @@
         "I learned a lesson from the Ass, replied the Fox, carefully edging away."
       ],
       "moral": "Learn from the misfortunes of others.",
-      "characters": []
+      "characters": ["The Lion", "The Ass", "The Fox"],
+      "character_sentiment": {
+            "The Lion": -1,
+            "The Ass": 1,
+            "The Fox": 0
+          }
     },
 
     {
@@ -3383,7 +3483,13 @@
         "If any of you have any claim to the part that is left, he growled, stretching his claws meaningly, now is the time to speak up."
       ],
       "moral": "Might makes right.",
-      "characters": []
+      "characters": ["The Lion", "The Fox", "The Jackal", "The Wolf"],
+      "character_sentiment": {
+          "The Lion": -1,
+          "The Fox": 0,
+          "The Jackal": 0,
+          "The Wolf": 0
+        }
     },
 
     {
@@ -3397,7 +3503,11 @@
         "Well, my son, that proves you've lost your sense of smell as well as being blind."
       ],
       "moral": "Boast of one thing and you will be found lacking in that and a few other things as well.",
-      "characters": []
+      "characters": ["The Mole", "The Mother"],
+      "character_sentiment": {
+          "The Mole": 0,
+          "The Mother": 0
+        }
     },
 
     {
@@ -3418,7 +3528,12 @@
         "At last he became so heated that he pulled off his cloak, and, to escape the blazing sunshine, threw himself down in the welcome shade of a tree by the roadside."
       ],
       "moral": "Gentleness and kind persuasion win where force and bluster fail.",
-      "characters": []
+      "characters": ["The North Wind", "The Sun", "The Traveler"],
+      "character_sentiment": {
+        "The North Wind": 0,
+        "The Sun": 0,
+        "The Traveler": 0
+      }
     },
 
     {
@@ -3432,11 +3547,17 @@
         "All those who were so unfortunate as to have horns, began to pack up and move out.",
         "Even the Hare, who, as you know, has no horns and so had nothing to fear, passed a very restless night, dreaming awful dreams about the fearful Lion.",
         "And when he came out of the warren in the early morning sunshine, and there saw the shadow cast by his long and pointed ears, a terrible fright seized him.",
-        "Goodby, neighbor Cricket, he called. I'm off.",
+        "Goodbye, neighbor Cricket, he called. I'm off.",
         "He will certainly make out that my ears are horns, no matter what I say."
       ],
       "moral": "Your enemies will seize any excuse to attack you.",
-      "characters": []
+      "characters": ["The Hare", "The Ears", "The Lion"],
+      "character_sentiment": {
+        "The Hare": 0,
+        "The Ears": 0,
+        "The Lion": -1
+      }
+
     },
 
     {
@@ -3453,7 +3574,12 @@
         "They persuaded the Dogs to go away, and that very evening the Wolves had the grandest feast of their lives."
       ],
       "moral": "Do not give up friends for foes.",
-      "characters": []
+      "characters": ["The Wolves", "The Sheep", "The Dogs"],
+      "character_sentiment": {
+        "The Wolves": -1,
+        "The Sheep": 0,
+        "The Dogs": 0
+      }
     },
 
     {
@@ -3472,7 +3598,12 @@
         "He soon roused the whole hen yard, and when the Farmer came running out, that was the end of Mr. Fox."
       ],
       "moral": "The wicked deserve no aid.",
-      "characters": []
+      "characters": ["The Fox", "The Cock", "The Farmer"],
+      "character_sentiment": {
+        "The Fox": -1,
+        "The Cock": 0,
+        "The Farmer": 0
+      }
     },
 
     {
@@ -3488,7 +3619,12 @@
         "But you gave yourself away with that silly bray."
       ],
       "moral": "A fool may deceive by his dress and appearance, but his words will soon show what he really is.",
-      "characters": []
+      "characters": ["The Ass", "The Lion Skin", "The Fox"],
+      "character_sentiment": {
+        "The Ass": -1,
+        "The Lion Skin": 0,
+        "The Fox": 0
+      }
     },
 
     {
@@ -3504,7 +3640,11 @@
         "However small you may be, you are better than nothing at all."
       ],
       "moral": "A small gain is worth more than a large promise.",
-      "characters": []
+      "characters": ["The Fisherman", "The Little Fish"],
+      "character_sentiment": {
+        "The Fisherman": 0,
+        "The Little Fish": 0
+      }
     },
 
     {
@@ -3519,7 +3659,11 @@
         "His rival saw the deed, and coming out of his corner, took his place as master of the farmyard."
       ],
       "moral": "Pride goes before a fall.",
-      "characters": []
+      "characters": ["The Fighting Cocks", "The Eagle"],
+      "character_sentiment": {
+        "The Fighting Cocks": 0,
+        "The Eagle": 0
+      }
     }
   ]
 }
