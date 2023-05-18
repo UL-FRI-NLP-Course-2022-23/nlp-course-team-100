@@ -1,0 +1,299 @@
+{
+    "detailed": {
+        "appearance": {
+            "SentimentAfinn": {
+                "positive": {
+                    "all": 29,
+                    "correct": 3
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 12
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 58
+                }
+            },
+            "SentimentStanza": {
+                "positive": {
+                    "all": 29,
+                    "correct": 0
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 9
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 71
+                }
+            },
+            "SentimentSpacy": {
+                "positive": {
+                    "all": 29,
+                    "correct": 1
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 0
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 86
+                }
+            }
+        },
+        "first_sentence": {
+            "SentimentAfinn": {
+                "positive": {
+                    "all": 29,
+                    "correct": 6
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 26
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 29
+                }
+            },
+            "SentimentStanza": {
+                "positive": {
+                    "all": 29,
+                    "correct": 6
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 21
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 53
+                }
+            },
+            "SentimentSpacy": {
+                "positive": {
+                    "all": 29,
+                    "correct": 3
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 5
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 80
+                }
+            }
+        },
+        "last_sentence": {
+            "SentimentAfinn": {
+                "positive": {
+                    "all": 29,
+                    "correct": 12
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 27
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 22
+                }
+            },
+            "SentimentStanza": {
+                "positive": {
+                    "all": 29,
+                    "correct": 3
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 18
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 47
+                }
+            },
+            "SentimentSpacy": {
+                "positive": {
+                    "all": 29,
+                    "correct": 2
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 2
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 77
+                }
+            }
+        },
+        "first_and_last": {
+            "SentimentAfinn": {
+                "positive": {
+                    "all": 29,
+                    "correct": 4
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 16
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 51
+                }
+            },
+            "SentimentStanza": {
+                "positive": {
+                    "all": 29,
+                    "correct": 0
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 10
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 73
+                }
+            },
+            "SentimentSpacy": {
+                "positive": {
+                    "all": 29,
+                    "correct": 0
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 1
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 85
+                }
+            }
+        },
+        "until_first_mention": {
+            "SentimentAfinn": {
+                "positive": {
+                    "all": 29,
+                    "correct": 5
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 19
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 38
+                }
+            },
+            "SentimentStanza": {
+                "positive": {
+                    "all": 29,
+                    "correct": 5
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 18
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 61
+                }
+            },
+            "SentimentSpacy": {
+                "positive": {
+                    "all": 29,
+                    "correct": 3
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 3
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 83
+                }
+            }
+        },
+        "after_last_mention": {
+            "SentimentAfinn": {
+                "positive": {
+                    "all": 29,
+                    "correct": 1
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 10
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 74
+                }
+            },
+            "SentimentStanza": {
+                "positive": {
+                    "all": 29,
+                    "correct": 0
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 1
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 20
+                }
+            },
+            "SentimentSpacy": {
+                "positive": {
+                    "all": 29,
+                    "correct": 0
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 0
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 88
+                }
+            }
+        }
+    },
+    "summary_methods": {
+        "SentimentAfinn": {
+            "CA": 0.3740942028985507
+        },
+        "SentimentStanza": {
+            "CA": 0.37681159420289856
+        },
+        "SentimentSpacy": {
+            "CA": 0.4701086956521739
+        }
+    },
+    "summary_approaches": {
+        "appearance": {
+            "CA": 0.43478260869565216
+        },
+        "first_sentence": {
+            "CA": 0.4148550724637681
+        },
+        "last_sentence": {
+            "CA": 0.3804347826086957
+        },
+        "first_and_last": {
+            "CA": 0.43478260869565216
+        },
+        "until_first_mention": {
+            "CA": 0.4257246376811594
+        },
+        "after_last_mention": {
+            "CA": 0.35144927536231885
+        }
+    }
+}
