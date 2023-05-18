@@ -1,6 +1,20 @@
 {
     "detailed": {
         "appearance": {
+            "SentimentRoBERTa": {
+                "positive": {
+                    "all": 29,
+                    "correct": 2
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 16
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 51
+                }
+            },
             "SentimentAfinn": {
                 "positive": {
                     "all": 29,
@@ -42,9 +56,37 @@
                     "all": 88,
                     "correct": 86
                 }
+            },
+            "SentimentAnsamble": {
+                "positive": {
+                    "all": 29,
+                    "correct": 0
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 6
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 78
+                }
             }
         },
         "first_sentence": {
+            "SentimentRoBERTa": {
+                "positive": {
+                    "all": 29,
+                    "correct": 15
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 31
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 0
+                }
+            },
             "SentimentAfinn": {
                 "positive": {
                     "all": 29,
@@ -86,9 +128,37 @@
                     "all": 88,
                     "correct": 80
                 }
+            },
+            "SentimentAnsamble": {
+                "positive": {
+                    "all": 29,
+                    "correct": 3
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 13
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 62
+                }
             }
         },
         "last_sentence": {
+            "SentimentRoBERTa": {
+                "positive": {
+                    "all": 29,
+                    "correct": 14
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 41
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 0
+                }
+            },
             "SentimentAfinn": {
                 "positive": {
                     "all": 29,
@@ -130,9 +200,37 @@
                     "all": 88,
                     "correct": 77
                 }
+            },
+            "SentimentAnsamble": {
+                "positive": {
+                    "all": 29,
+                    "correct": 5
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 20
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 45
+                }
             }
         },
         "first_and_last": {
+            "SentimentRoBERTa": {
+                "positive": {
+                    "all": 29,
+                    "correct": 7
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 20
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 33
+                }
+            },
             "SentimentAfinn": {
                 "positive": {
                     "all": 29,
@@ -174,9 +272,37 @@
                     "all": 88,
                     "correct": 85
                 }
+            },
+            "SentimentAnsamble": {
+                "positive": {
+                    "all": 29,
+                    "correct": 2
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 8
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 67
+                }
             }
         },
         "until_first_mention": {
+            "SentimentRoBERTa": {
+                "positive": {
+                    "all": 29,
+                    "correct": 12
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 26
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 19
+                }
+            },
             "SentimentAfinn": {
                 "positive": {
                     "all": 29,
@@ -218,9 +344,37 @@
                     "all": 88,
                     "correct": 83
                 }
+            },
+            "SentimentAnsamble": {
+                "positive": {
+                    "all": 29,
+                    "correct": 2
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 9
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 67
+                }
             }
         },
         "after_last_mention": {
+            "SentimentRoBERTa": {
+                "positive": {
+                    "all": 29,
+                    "correct": 0
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 28
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 55
+                }
+            },
             "SentimentAfinn": {
                 "positive": {
                     "all": 29,
@@ -262,10 +416,27 @@
                     "all": 88,
                     "correct": 88
                 }
+            },
+            "SentimentAnsamble": {
+                "positive": {
+                    "all": 29,
+                    "correct": 0
+                },
+                "negative": {
+                    "all": 67,
+                    "correct": 0
+                },
+                "neutral": {
+                    "all": 88,
+                    "correct": 19
+                }
             }
         }
     },
     "summary_methods": {
+        "SentimentRoBERTa": {
+            "CA": 0.3351449275362319
+        },
         "SentimentAfinn": {
             "CA": 0.3740942028985507
         },
@@ -274,26 +445,29 @@
         },
         "SentimentSpacy": {
             "CA": 0.4701086956521739
+        },
+        "SentimentAnsamble": {
+            "CA": 0.3677536231884058
         }
     },
     "summary_approaches": {
         "appearance": {
-            "CA": 0.43478260869565216
+            "CA": 0.42717391304347824
         },
         "first_sentence": {
-            "CA": 0.4148550724637681
+            "CA": 0.38369565217391305
         },
         "last_sentence": {
-            "CA": 0.3804347826086957
+            "CA": 0.3641304347826087
         },
         "first_and_last": {
-            "CA": 0.43478260869565216
+            "CA": 0.4097826086956522
         },
         "until_first_mention": {
-            "CA": 0.4257246376811594
+            "CA": 0.40217391304347827
         },
         "after_last_mention": {
-            "CA": 0.35144927536231885
+            "CA": 0.3217391304347826
         }
     }
 }
