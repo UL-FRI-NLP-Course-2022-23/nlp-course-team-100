@@ -8,6 +8,10 @@ from scipy.special import softmax
 import json
 import os
 from pprint import pprint
+from tqdm import tqdm
+from copy import deepcopy
+import matplotlib.pyplot as plt
+import itertools
 
 class SentimentPrediction: 
 
@@ -147,7 +151,6 @@ class SentimentAnsamble(SentimentPrediction):
         return "SentimentAnsamble"
 
 def test_the_wolf_and_kid_story():
-
     story = {
         "number": "01",
         "title": "THE WOLF AND THE KID",
@@ -260,7 +263,7 @@ def load_data(path_to_annotations, path_to_coref, path_to_ner):
     with open(path_to_annotations) as json_file:
         data = json.load(json_file)
     
-    for idx, _ in enumerate(data['stories']):
+    for idx, _ in tqdm(enumerate(data['stories'])):
         data['stories'][idx]['story_coref'] = load_story_coref(data['stories'][idx], path_to_coref)
         data['stories'][idx]['story_ner'] = load_story_ner(data['stories'][idx], path_to_ner)
         data['stories'][idx]['character_sentences'] = extract_characters_sentences(data['stories'][idx])
@@ -278,7 +281,7 @@ def extract_characters_sentences(story):
         for character in story['story_ner']['characters']
     }
     
-def predict_sentiment_analysis(data):
+def predict_sentiment_on_data(data):
     models = [
         #SentimentRoBERTa(),
         SentimentAfinn(),
@@ -308,20 +311,131 @@ def predict_sentiment_analysis(data):
         
     return data
 
+def get_sentiment_stats(data):
+    stats = {
+        "character_sentiment_stats":{
+            "positive":0,
+            "negative":0,
+            "neutral":0,
+        },
+        "animals_stats":{}
+    }
+
+    sentiment_to_label_converter = {
+        1:"positive",
+        -1:"negative",
+        0:"neutral"
+    }
+
+    for idx, story in enumerate(data['stories']):                                        
+        for character in story["character_sentiment"]:
+            label = sentiment_to_label_converter[story["character_sentiment"][character]]
+            stats["character_sentiment_stats"][label] += 1                        
+            if not character in stats["animals_stats"]:
+                stats["animals_stats"][character] = {
+                    "positive":0,
+                    "negative":0,
+                    "neutral":0,
+                    "appeared":0
+                }
+
+            stats["animals_stats"][character][label] += 1
+            stats["animals_stats"][character]["appeared"] += 1
+
+    n = 5
+    least_apperances = 5
+    keys = list(stats["animals_stats"].keys())
+    print("Number of all characters: {}".format(len(keys)))    
+    keys = [key for key in keys if stats["animals_stats"][key]["appeared"] > least_apperances]
+    
+    print("{} of characters appeared at least {} times".format(len(keys), least_apperances))    
+
+    keys.sort(key=lambda key: stats["animals_stats"][key]["positive"]/stats["animals_stats"][key]["appeared"])
+    positive_sorted = deepcopy(keys)
+    
+    keys.sort(key=lambda key: stats["animals_stats"][key]["negative"]/stats["animals_stats"][key]["appeared"])
+    negative_sorted = deepcopy(keys)
+
+    keys.sort(key=lambda key: stats["animals_stats"][key]["neutral"]/stats["animals_stats"][key]["appeared"])
+    neutral_sorted = deepcopy(keys)
+
+    keys.sort(key=lambda key: stats["animals_stats"][key]["appeared"])
+    appeared_sorted = deepcopy(keys)
+
+    top_n_characters = {
+        "most":{
+            "positive": list(reversed(positive_sorted[-n:])),
+            "negative": list(reversed(negative_sorted[-n:])),
+            "neutral": list(reversed(neutral_sorted[-n:])),
+            "appeared": list(reversed(appeared_sorted[-n:]))
+        },
+        "least":{
+            "positive": positive_sorted[:n],
+            "negative": negative_sorted[:n],
+            "neutral": neutral_sorted[:n],
+            "appeared": appeared_sorted[:n]            
+        }
+        
+    } 
+
+    plt.figure(figsize=(14,6))
+    
+    sentiment = list(stats["character_sentiment_stats"].keys())
+    occurences = list(stats["character_sentiment_stats"].values())    
+    plt.bar(sentiment,occurences, color = ["g","r","b"])
+    plt.title("Character sentiment class distribution")
+    plt.savefig("character_sentiment_stats.png")
+    plt.clf()
+    #for _type  in ["most", "least"]:
+    for _type  in ["most", "least"]:
+        data = [
+            [stats["animals_stats"][character]["positive"]/stats["animals_stats"][character]["appeared"] for character in top_n_characters[_type]["positive"]],
+            [stats["animals_stats"][character]["negative"]/stats["animals_stats"][character]["appeared"] for character in top_n_characters[_type]["negative"]],
+            [stats["animals_stats"][character]["neutral"] /stats["animals_stats"][character]["appeared"] for character in top_n_characters[_type]["neutral"]]
+        ]    
+        X = np.arange(n)        
+        plt.barh(X + 0.00, data[0], color = 'g', height = 0.25, label="positive")
+        plt.barh(X + 0.25, data[1], color = 'r', height = 0.25, label="negative")
+        plt.barh(X + 0.50, data[2], color = 'b', height = 0.25, label="neutral")
+        labels = [
+            [
+                "{} ({})".format(top_n_characters[_type]["positive"][i], stats["animals_stats"][top_n_characters[_type]["positive"][i]]["appeared"]), 
+                "{} ({})".format(top_n_characters[_type]["negative"][i], stats["animals_stats"][top_n_characters[_type]["positive"][i]]["appeared"]), 
+                "{} ({})".format(top_n_characters[_type]["neutral"][i], stats["animals_stats"][top_n_characters[_type]["positive"][i]]["appeared"]) 
+            ] for i in range(0,n)
+        ]
+        labels = list(itertools.chain.from_iterable(labels))
+        locs = [[i + 0.0, i+0.25, i+0.50] for i in range(0,n)]
+        locs = list(itertools.chain.from_iterable(locs))
+
+        plt.yticks(locs, labels)  # Set text labels.
+        plt.legend()
+        plt.title("Sentiment class distribution with respect to characters (top {} per class)".format(n))
+        #plt.show()
+        plt.savefig("top_n_characters_{}.png".format(_type))
+        plt.clf()
+
+
+    
+
+def predict_sentiment(data):
+    data = predict_sentiment_on_data(data)
+    store_path = '../results/sentiment/sentiment_prediction.json'
+    if os.path.exists(store_path):
+        os.remove(store_path)
+    
+    with open(store_path, 'w') as f:
+        f.write(json.dumps(data,indent=4))
+
 def main():
     data = load_data(
         path_to_annotations='../data/annotations/AesopFablesCharacterSentiment.json',
         path_to_coref='../results/spacy/coref',
         path_to_ner='../results/spacy/ner',
     )
-    data = predict_sentiment_analysis(data)
-    store_path = '../results/sentiment/sentiment_prediction.json'
-    if os.path.exists(store_path):
-        os.remove(store_path)
-
+    get_sentiment_stats(data)
+    #predict_sentiment(data)
     
-    with open(store_path, 'w') as f:
-        f.write(json.dumps(data,indent=4))
 
 if __name__ == "__main__":
     
