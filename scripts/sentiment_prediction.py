@@ -12,18 +12,42 @@ from tqdm import tqdm
 from copy import deepcopy
 import matplotlib.pyplot as plt
 import itertools
-
+import random
+VERBOSE = False
 class SentimentPrediction: 
 
     def __init__(self):
         pass
 
     def score_sentiment_sentences(self,sentences):
-        return np.round(np.mean([self.score_sentiment_sentence(sentence) for sentence in sentences]))
+        if VERBOSE:                                    
+            print("SentimentPrediction.score_sentiment_sentences():")            
+        average_sentiment = np.round(np.mean([self.score_sentiment_sentence(sentence) for sentence in sentences]))
+
+        if VERBOSE:
+            print("SentimentPrediction.score_sentiment_sentences(): average_sentiment: " + str(average_sentiment))
+        
+        return average_sentiment
     
     def score_sentiment_sentence(self,sentence):
         pass
 
+class SentimentSentenceRandom(SentimentPrediction): 
+
+    def __init__(self):
+        super().__init__()
+
+    def score_sentiment_sentence(self, sentence):
+        #num_of_words = len(sentence.split(" "))
+        score = random.sample([0,1,-1],k=1)[0]
+        if VERBOSE:
+            print("SentimentSentenceRandom.score_sentiment_sentence(): sentence: " + str(sentence))        
+            print("SentimentSentenceRandom.score_sentiment_sentence(): score: " + str(score)) 
+        return score 
+    
+    def __str__(self):
+        return "SentimentSentenceRandom"
+    
 class SentimentAfinn(SentimentPrediction): 
 
     def __init__(self):
@@ -38,7 +62,9 @@ class SentimentAfinn(SentimentPrediction):
 
         if score > 1:
             score = 1
-
+        if VERBOSE:
+            print("SentimentAfinn.score_sentiment_sentence(): sentence: " + str(sentence))        
+            print("SentimentAfinn.score_sentiment_sentence(): score: " + str(score)) 
         return score
         
     
@@ -54,15 +80,19 @@ class SentimentRoBERTa(SentimentPrediction):
         self.label_converter = {
             "POSITIVE":1,
             "NEGATIVE":-1,
-            "neutral":0,
+            "NEUTRAL":0,
         }
 
     def score_sentiment_sentence(self, sentence):
+        
         inference = self.sentiment_analysis(sentence)        
         if len(inference) > 1:
             raise Exception("More than one sentence was provided")        
-        #print(inference[0]["label"])
-        return self.label_converter[inference[0]["label"]]
+        score = self.label_converter[inference[0]["label"]]
+        if VERBOSE:
+            print("SentimentRoBERTa.score_sentiment_sentence(): sentence: " + str(sentence))        
+            print("SentimentRoBERTa.score_sentiment_sentence(): score: " + str(score))        
+        return score
 
     def __str__(self):
         return "SentimentRoBERTa"
@@ -83,7 +113,13 @@ class SentimentStanza(SentimentPrediction):
             1: 0, 
             2: 1
         }
-        return np.mean([stanza_label_converter[i.sentiment] for i in inference.sentences])
+        score = np.mean([stanza_label_converter[i.sentiment] for i in inference.sentences])
+        
+        if VERBOSE:
+            print("SentimentStanza.score_sentiment_sentence(): sentence: " + str(sentence))        
+            print("SentimentStanza.score_sentiment_sentence(): score: " + str(score))        
+        
+        return score 
         
 
     def __str__(self):
@@ -98,8 +134,12 @@ class SentimentSpacy(SentimentPrediction):
         self.pipeline.add_pipe('spacytextblob')
 
     def score_sentiment_sentence(self, sentence):
-        inference = self.pipeline(sentence)            
-        return inference._.blob.polarity     
+        inference = self.pipeline(sentence)      
+        score = inference._.blob.polarity     
+        if VERBOSE:
+            print("SentimentSpacy.score_sentiment_sentence(): sentence: " + str(sentence))        
+            print("SentimentSpacy.score_sentiment_sentence(): score: " + str(score))              
+        return score
 
     def __str__(self):
         return "SentimentSpacy"
@@ -289,9 +329,18 @@ def load_data(path_to_annotations, path_to_coref, path_to_ner):
 
 
 def extract_character_sentences(story, character,_type):
-    story_sentences = story['story_coref']['coref'].split(".")
-    character_sentences = list(filter(lambda sentence: character.title() in sentence.title(), story_sentences))
     try:
+        #print("")
+        #print("")
+        #print("")
+        story_sentences_coref = story['story_coref']['coref'].split(".")
+        story_sentences = story['story']
+        #print("len(story_sentences): " + str(len(story_sentences)))
+        #print("len(story_sentences_coref): " + str(len(story_sentences_coref)))
+        character_sentences = list(filter(lambda sentence: character.title() in sentence.title(), story_sentences_coref))
+        character_sentences_idx = [story_sentences_coref.index(sentence) for sentence in character_sentences]
+        character_sentences = [story_sentences[idx] for idx in character_sentences_idx]
+    
         if _type == "appearance":        
             return character_sentences
         elif _type == "first_sentence":
@@ -309,8 +358,14 @@ def extract_character_sentences(story, character,_type):
     except Exception as e:
         #print("story: ")
         #pprint(story)
-        #print("character: " + str(character))
-        #print("_type: " + str(_type))
+        ##print("character: " + str(character))
+        ##print("_type: " + str(_type))
+        #print("")
+        #print("story_sentences")
+        #print(story_sentences)
+        #print("")
+        #print("story_sentences_coref")
+        #print(story_sentences_coref)
         #raise e
         return []
         
@@ -323,11 +378,12 @@ def extract_characters_sentences(story,_type):
     
 def predict_sentiment_on_data(data):
     models = [
-        SentimentRoBERTa(),
+        SentimentSentenceRandom(),
+        #SentimentRoBERTa(),
         SentimentAfinn(),
         SentimentStanza(),
         SentimentSpacy(),
-        SentimentAnsamble(),        
+        #SentimentAnsamble(),        
     ]
     for idx in tqdm(range(0,len(data['stories']))):
         #if idx >= 10:
@@ -339,11 +395,19 @@ def predict_sentiment_on_data(data):
                 data['stories'][idx]['scores'][approach] = {}
             for character in character_sentences[approach]:
                 if len(character_sentences[approach][character]) > 0:
+                    if VERBOSE:
+                        print("")
+                        print("")
+                        print("")
+                        print("predict_sentiment_on_data(): character: " + str(character))
                     scores = {
                         str(model): model.score_sentiment_sentences(character_sentences[approach][character]) for model in models
                     }   
+                    scores["Majority"] = 0
+                    scores["CharacterRandom"] = random.sample([0,1,-1],k=1)[0]
+
                     data['stories'][idx]['scores'][approach][character] = scores
-            
+
         
     return data
 
@@ -465,9 +529,35 @@ def predict_sentiment(data):
 
     return data
 
+def calc_metrics(confusion_matrix):
+    tp = confusion_matrix["tp"]
+    fp = confusion_matrix["fp"]
+    tn = confusion_matrix["tn"]
+    fn = confusion_matrix["fn"]
+    if tn+fp == 0:
+        Spec = 0
+    else:
+        Spec = (tn)/(tn+fp)
+    
+    if tp+fn == 0:
+        Sens = 0
+    else:
+        Sens = (tp)/(tp+fn)
+
+    if tp + fp == 0:
+        Pr = 0
+    else:
+        Pr = (tp)/(tp+fp)
+    
+    return {
+        "CA": (tp+tn)/(tp+tn+fp+fn),
+        "Spec": Spec,
+        "Sens": Sens,        
+        "Pr": Pr,        
+    }
+
 def eval_predict_sentiment(data):
-    #correct = 0
-    #_all = 0
+
     results = {}
     class_to_label_converter = {
         1:"positive",
@@ -476,12 +566,11 @@ def eval_predict_sentiment(data):
     }
     models = []
     approaches = []
+    classes = ["positive", "negative", "neutral"]
     for idx, story in enumerate(data["stories"]):
         if not "scores" in story:
             continue
-        #print("")
-        #print("")
-        #print("")
+
         character_sentiment = story["character_sentiment"]
         annotated_characters = list(character_sentiment.keys()) 
         
@@ -493,69 +582,121 @@ def eval_predict_sentiment(data):
             for character in story["scores"][approach]:
                 _match_ = list(filter(lambda c: character.upper() in c.upper(),annotated_characters)) 
                 if len(_match_) != 1:                    
-                    #print("cannot find {} in {}".format(character, annotated_characters))
+                    
                     continue
-                #else:
-                #    #print("found {} in {}".format(character, annotated_characters))
+                
 
                 annotated_sentiment = character_sentiment[_match_[0]]
                 for method in story["scores"][approach][character]:
-                    #print("method: {}, models: {}".format(method, models))
+                
                     if not method in models:
                         models.append(method)
 
                     if not method in results[approach]:
+                        classes
                         results[approach][method] = {
-                            "positive":{
-                                "all":0,
-                                "correct":0,
-                            },
-                            "negative":{
-                                "all":0,
-                                "correct":0,
-                            },
-                            "neutral":{
-                                "all":0,
-                                "correct":0,
-                            },
+                            _class_:{
+                                "tp":0,
+                                "tn":0,
+                                "fp":0,
+                                "fn":0,
+                            }
+                            for _class_ in classes
                         }
-                    
-                    results[approach][method][class_to_label_converter[annotated_sentiment]]["all"] += 1
-                    predicted_sentiment = story["scores"][approach][character][method]
-                    if annotated_sentiment == predicted_sentiment:
-                        results[approach][method][class_to_label_converter[annotated_sentiment]]["correct"] += 1
-
-
                         
-        #pprint(results)
+                    
+                    
+                    predicted_sentiment = story["scores"][approach][character][method]    
+                    
+                    if annotated_sentiment == predicted_sentiment:
+                        results[approach][method][class_to_label_converter[predicted_sentiment]]["tp"] += 1
+                        for __class__ in classes:
+                            if __class__ == class_to_label_converter[predicted_sentiment]:
+                                continue                            
+                            results[approach][method][__class__]["tn"] += 1
+                    else:
+                        results[approach][method][class_to_label_converter[annotated_sentiment]]["fn"] += 1
+                        results[approach][method][class_to_label_converter[predicted_sentiment]]["fp"] += 1                                                    
+
+    metrics = {
+        "approach_based":{
+
+        },
+        "method_based":{
+            
+        }
+    }
+
+    for approach in results:        
+        metrics["approach_based"][approach] = {
+            _class_: {
+                "tp":0,
+                "tn":0,
+                "fp":0,
+                "fn":0,
+            }
+            for _class_ in classes
+        }            
+        for method in results[approach]:
+            for _class_ in results[approach][method]:
+                for _cf_class_ in results[approach][method][_class_]:
+                    metrics["approach_based"][approach][_class_][_cf_class_] += results[approach][method][_class_][_cf_class_]
+    
+    for method in models:        
+        metrics["method_based"][method] = {
+            _class_: {
+                "tp":0,
+                "tn":0,
+                "fp":0,
+                "fn":0,
+            }
+            for _class_ in classes
+        }            
+        for approach in results:
+            for _class_ in results[approach][method]:
+                for _cf_class_ in results[approach][method][_class_]:
+                    metrics["method_based"][method][_class_][_cf_class_] += results[approach][method][_class_][_cf_class_]                        
+
+    summary_metrics = {
+        _type_: {
+            method: {
+                _class_: calc_metrics(metrics[_type_][method][_class_])
+                for _class_ in metrics[_type_][method]
+            }
+            for method in metrics[_type_]
+        }
+        for _type_ in metrics
+    }
+    
     
     all_results = {
         "detailed":results,
-        "summary_methods": {
-            method: {
-                "CA":sum([results[approach][method][__class__]["correct"] for approach in results for __class__ in results[approach][method]])/sum([results[approach][method][__class__]["all"] for approach in results for __class__ in results[approach][method]])
-            }
-            for method in models
-        },
-        "summary_approaches": {
-            approach:{
-                "CA":sum([results[approach][method][__class__]["correct"] for method in results[approach] for __class__ in results[approach][method]])/sum([results[approach][method][__class__]["all"] for method in results[approach] for __class__ in results[approach][method]])
-            }
-            for approach in approaches
+        "metrics": {                
+            approach: {
+                method: {
+                    _class_ : calc_metrics(results[approach][method][_class_])
+                    for _class_ in results[approach][method]
+                }
+                for method in results[approach]
+            }            
+            for approach in results
         }
     }
-    store_path = '../results/sentiment/sentiment_evaluation.json'
+        
+    store_path = '../results/sentiment/sentiment_evaluation_all_results.json'
     if os.path.exists(store_path):
         os.remove(store_path)
     
     with open(store_path, 'w') as f:
         f.write(json.dumps(all_results,indent=4))
-    
-    #print("")
-    #print("")
-    #print("")
-    #pprint(results)
 
+    store_path = '../results/sentiment/sentiment_evaluation_summary_metrics.json'
+    if os.path.exists(store_path):
+        os.remove(store_path)
+    
+    with open(store_path, 'w') as f:
+        f.write(json.dumps(summary_metrics,indent=4))
+    
 
 def main():
     
@@ -569,14 +710,15 @@ def main():
     
     store_path = '../results/sentiment/sentiment_prediction.json'
     with open(store_path) as json_file:
-        data = json.load(json_file)
-    
+        data = json.load(json_file)                        
     eval_predict_sentiment(data)
     
-
 if __name__ == "__main__":
     
     main()
+
+    #method = SentimentRoBERTa()    
+    #print(method.score_sentiment_sentence(sentence))
     
     
     
