@@ -35,7 +35,7 @@ def main():
     with open(corpus_path) as f:
         data = json.load(f)
     stories = data["stories"]
-    stanza_ner(stories,True)
+    stanza_ner(stories, True)
         
 
 if __name__ == "__main__":

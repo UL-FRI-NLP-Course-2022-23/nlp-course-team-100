@@ -1,0 +1,6 @@
+Average letters per word: 5.111378537637978
+Average words per sentence: 15.447435897435897
+Average sentences per story: 10.612244897959183
+Characters: 123174
+Words: 24098
+Sentences: 1560
