@@ -378,8 +378,8 @@ def extract_characters_sentences(story,_type):
     
 def predict_sentiment_on_data(data):
     models = [
-        SentimentSentenceRandom(),
-        #SentimentRoBERTa(),
+        #SentimentSentenceRandom(),
+        SentimentRoBERTa(),
         SentimentAfinn(),
         SentimentStanza(),
         SentimentSpacy(),
@@ -464,10 +464,10 @@ def get_sentiment_stats(data):
 
     top_n_characters = {
         "most":{
-            "positive": list(reversed(positive_sorted[-n:])),
-            "negative": list(reversed(negative_sorted[-n:])),
-            "neutral": list(reversed(neutral_sorted[-n:])),
-            "appeared": list(reversed(appeared_sorted[-n:]))
+            "positive": positive_sorted[-n:],
+            "negative": negative_sorted[-n:],
+            "neutral": neutral_sorted[-n:],
+            "appeared": appeared_sorted[-n:]
         },
         "least":{
             "positive": positive_sorted[:n],
@@ -484,7 +484,7 @@ def get_sentiment_stats(data):
     occurences = list(stats["character_sentiment_stats"].values())    
     plt.bar(sentiment,occurences, color = ["g","r","b"])
     plt.title("Character sentiment class distribution")
-    plt.savefig("character_sentiment_stats.png")
+    plt.savefig("../plots/character_sentiment_stats.png")
     plt.clf()
     
     for _type  in ["most", "least"]:
@@ -510,13 +510,12 @@ def get_sentiment_stats(data):
 
         plt.yticks(locs, labels)  # Set text labels.
         plt.legend()
+        plt.xlim((0,1.2))
         plt.title("Sentiment class distribution with respect to characters (top {} per class)".format(n))
         #plt.show()
-        plt.savefig("top_n_characters_{}.png".format(_type))
+        plt.savefig("../plots/top_n_characters_{}.png".format(_type))
         plt.clf()
 
-
-    
 
 def predict_sentiment(data):
     data = predict_sentiment_on_data(data)
@@ -697,6 +696,35 @@ def eval_predict_sentiment(data):
     with open(store_path, 'w') as f:
         f.write(json.dumps(summary_metrics,indent=4))
     
+    return summary_metrics
+
+def plot_metrics(summary_metrics):
+    classes = ["negative", "positive", "neutral"]
+    metrics = ["CA", "Spec", "Sens", "Pr"]
+    
+    for base in summary_metrics:
+        for _class_ in classes:
+            plt.figure(figsize=(14,6))
+            data = [
+                [summary_metrics[base][method][_class_][metric] if summary_metrics[base][method][_class_][metric] else 0.005 for metric in metrics ]                
+                for method in summary_metrics[base]
+            ]  
+            step = 1/(len(summary_metrics[base])+1)
+            X = np.arange(len(metrics))        
+            for idx, method in enumerate(summary_metrics[base]):                                
+                plt.barh(X + idx*step, data[idx], height = step, label=method)
+                
+          
+            labels = [metric for metric in metrics]            
+            #step_loc = 1/(len(metrics)+1)
+            locs = [idx + 2.5*step for idx, _ in enumerate(metrics)]
+            plt.xlim((0,1.2))
+            plt.yticks(locs, labels)  # Set text labels.
+            plt.legend()
+            plt.title("Sentiment performance (class = {})".format(_class_))            
+            plt.savefig("../plots/sentiment_performance_{}_{}.png".format(base, _class_))
+            plt.clf()
+
 
 def main():
     
@@ -705,21 +733,20 @@ def main():
         path_to_coref='../results/spacy/coref',
         path_to_ner='../results/spacy/ner',
     )
-    get_sentiment_stats(data)
-    data = predict_sentiment(data)
+    get_sentiment_stats(data)    
     
+    data = predict_sentiment(data)    
     store_path = '../results/sentiment/sentiment_prediction.json'
     with open(store_path) as json_file:
         data = json.load(json_file)                        
-    eval_predict_sentiment(data)
-    
-if __name__ == "__main__":
-    
-    main()
+    summary_metrics = eval_predict_sentiment(data)
+    """
+    store_path = '../results/sentiment/sentiment_evaluation_summary_metrics.json'
+    with open(store_path) as json_file:
+        summary_metrics = json.load(json_file)                        
+    """
+    plot_metrics(summary_metrics)
 
-    #method = SentimentRoBERTa()    
-    #print(method.score_sentiment_sentence(sentence))
-    
-    
-    
-    #test_the_wolf_and_kid_story()
+
+if __name__ == "__main__":    
+    main()
