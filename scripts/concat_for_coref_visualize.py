@@ -20,7 +20,7 @@ def main():
 
         sentences = (re.split(r"(?<!\w\.\w.)(?<![A-Z]\.)(?<![A-Z][a-z]\.)(?<=\.|\?)", concat_story))
 
-        sentencesOut = sentences[0] + sentences[1]
+        sentencesOut = sentences[0]
 
         write_story_to_json(sentencesOut, story['title'])
 
