@@ -1,0 +1,7 @@
+Average letters per word: 5.111378537637978
+Average words per sentence: 15.447435897435897
+Average sentences per story: 10.612244897959183
+Characters: 123174
+Words: 24098
+Sentences: 1560
+Top 10 non-Stopwords: [('the', 1630), ('to', 718), ('and', 707), ('a', 684), ('he', 517), ('of', 467), ('his', 345), ('was', 319), ('in', 308), ('that', 236)]
