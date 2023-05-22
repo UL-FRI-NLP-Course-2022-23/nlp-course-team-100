@@ -46,7 +46,7 @@ class SentimentSentenceRandom(SentimentPrediction):
         return score 
     
     def __str__(self):
-        return "SentimentSentenceRandom"
+        return "Random sentence"
     
 class SentimentAfinn(SentimentPrediction): 
 
@@ -69,7 +69,7 @@ class SentimentAfinn(SentimentPrediction):
         
     
     def __str__(self):
-        return "SentimentAfinn"
+        return "AFINN"
 
 class SentimentRoBERTa(SentimentPrediction): 
 
@@ -95,7 +95,7 @@ class SentimentRoBERTa(SentimentPrediction):
         return score
 
     def __str__(self):
-        return "SentimentRoBERTa"
+        return "SiEBERT"
 
 class SentimentStanza(SentimentPrediction): 
 
@@ -123,7 +123,7 @@ class SentimentStanza(SentimentPrediction):
         
 
     def __str__(self):
-        return "SentimentStanza"
+        return "CNN"
     
 
 class SentimentSpacy(SentimentPrediction): 
@@ -317,12 +317,13 @@ def load_data(path_to_annotations, path_to_coref, path_to_ner):
         data['stories'][idx]['story_coref'] = load_story_coref(data['stories'][idx], path_to_coref)
         data['stories'][idx]['story_ner'] = load_story_ner(data['stories'][idx], path_to_ner)
         data['stories'][idx]['character_sentences'] = {
-            "appearance":extract_characters_sentences(data['stories'][idx], "appearance"),
-            "first_sentence":extract_characters_sentences(data['stories'][idx], "first_sentence"),
-            "last_sentence":extract_characters_sentences(data['stories'][idx], "last_sentence"),
-            "first_and_last":extract_characters_sentences(data['stories'][idx], "first_and_last"),
-            "until_first_mention":extract_characters_sentences(data['stories'][idx], "until_first_mention"),
-            "after_last_mention":extract_characters_sentences(data['stories'][idx], "after_last_mention")
+            "All sentences":extract_characters_sentences(data['stories'][idx], "appearance"),
+            "First sentence":extract_characters_sentences(data['stories'][idx], "first_sentence"),
+            "Last sentence":extract_characters_sentences(data['stories'][idx], "last_sentence"),
+            "First and last sentence":extract_characters_sentences(data['stories'][idx], "first_and_last"),
+            "Until first mention":extract_characters_sentences(data['stories'][idx], "until_first_mention"),
+            "After last mention":extract_characters_sentences(data['stories'][idx], "after_last_mention"),
+            "Random sentence":extract_characters_sentences(data['stories'][idx], "random")
         }
         
     return data
@@ -355,6 +356,8 @@ def extract_character_sentences(story, character,_type):
         elif _type == "after_last_mention":
             idx_last_mention = story_sentences.index(character_sentences[-1])
             return story_sentences[-idx_last_mention:]
+        elif _type == "random":
+            return random.sample(story_sentences,k=1)
     except Exception as e:
         #print("story: ")
         #pprint(story)
@@ -382,7 +385,7 @@ def predict_sentiment_on_data(data):
         SentimentRoBERTa(),
         SentimentAfinn(),
         SentimentStanza(),
-        SentimentSpacy(),
+        #SentimentSpacy(),
         #SentimentAnsamble(),        
     ]
     for idx in tqdm(range(0,len(data['stories']))):
@@ -403,8 +406,8 @@ def predict_sentiment_on_data(data):
                     scores = {
                         str(model): model.score_sentiment_sentences(character_sentences[approach][character]) for model in models
                     }   
-                    scores["Majority"] = 0
-                    scores["CharacterRandom"] = random.sample([0,1,-1],k=1)[0]
+                    scores["Majority classifier"] = 0
+                    scores["Random classifier"] = random.sample([0,1,-1],k=1)[0]
 
                     data['stories'][idx]['scores'][approach][character] = scores
 
@@ -426,7 +429,7 @@ def get_sentiment_stats(data):
         -1:"negative",
         0:"neutral"
     }
-
+    num_of_all_characters = 0
     for idx, story in enumerate(data['stories']):                                        
         for character in story["character_sentiment"]:
             label = sentiment_to_label_converter[story["character_sentiment"][character]]
@@ -438,14 +441,15 @@ def get_sentiment_stats(data):
                     "neutral":0,
                     "appeared":0
                 }
-
+            num_of_all_characters += 1
             stats["animals_stats"][character][label] += 1
             stats["animals_stats"][character]["appeared"] += 1
 
     n = 5
     least_apperances = 5
     keys = list(stats["animals_stats"].keys())
-    print("Number of all characters: {}".format(len(keys)))    
+    
+    print("Number of all characters: {}".format(num_of_all_characters))    
     keys = [key for key in keys if stats["animals_stats"][key]["appeared"] > least_apperances]
     
     print("{} of characters appeared at least {} times".format(len(keys), least_apperances))    
@@ -483,7 +487,7 @@ def get_sentiment_stats(data):
     sentiment = list(stats["character_sentiment_stats"].keys())
     occurences = list(stats["character_sentiment_stats"].values())    
     plt.bar(sentiment,occurences, color = ["g","r","b"])
-    plt.title("Character sentiment class distribution")
+    plt.title("Character sentiment class distribution (N={})".format(num_of_all_characters))
     plt.savefig("../plots/character_sentiment_stats.png")
     plt.clf()
     
@@ -704,7 +708,7 @@ def plot_metrics(summary_metrics):
     
     for base in summary_metrics:
         for _class_ in classes:
-            plt.figure(figsize=(14,6))
+            plt.figure(figsize=(15,6))
             data = [
                 [summary_metrics[base][method][_class_][metric] if summary_metrics[base][method][_class_][metric] else 0.005 for metric in metrics ]                
                 for method in summary_metrics[base]
@@ -722,17 +726,59 @@ def plot_metrics(summary_metrics):
             plt.yticks(locs, labels)  # Set text labels.
             plt.legend()
             plt.title("Sentiment performance (class = {})".format(_class_))            
-            plt.savefig("../plots/sentiment_performance_{}_{}.png".format(base, _class_))
+            plt.savefig("../plots/sentiment_performance_{}_{}_metrics.png".format(base, _class_))
             plt.clf()
 
 
-def main():
+def add_newline_after_first_word(label):
+    words = label.split(" ")
+    if len(words) == 2:
+        words.insert(1,"\n")
+    else: 
+        words.insert(3,"\n")
+    return " ".join(words)
+
+
+def plot_methods(summary_metrics):
+    classes = ["negative", "positive", "neutral"]
+    metrics = ["CA", "Spec", "Sens", "Pr"]
     
+    for base in summary_metrics:
+        for _class_ in classes:
+            plt.figure(figsize=(15,6))
+            data = [
+                [summary_metrics[base][method][_class_][metric] if summary_metrics[base][method][_class_][metric] else 0.005 for method in summary_metrics[base]]                                
+                for metric in metrics
+                #for method in summary_metrics[base]
+            ]  
+            step = 1/(len(summary_metrics[base])+1)
+            X = np.arange(len(summary_metrics[base]))        
+            for idx, metric in enumerate(metrics):                                
+                plt.barh(X + idx*step, data[idx], height = step, label=metric)
+                          
+            labels = ["{} ({:.2f})".format(add_newline_after_first_word(method),sum([summary_metrics[base][method][_class_][metric] for metric in metrics])) for idx, method in enumerate(summary_metrics[base])]            
+            #step_loc = 1/(len(metrics)+1)
+            locs = [idx + 2.5*step for idx, _ in enumerate(summary_metrics[base])]
+            plt.xlim((0,1.2))
+            plt.yticks(locs, labels)  # Set text labels.
+            plt.legend()
+            plt.title("Sentiment performance (class = {})".format(_class_))            
+            plt.savefig("../plots/sentiment_performance_{}_{}_methods.png".format(base, _class_))
+            plt.clf()
+
+
+def plot_performance(summary_metrics):
+    plot_metrics(summary_metrics)
+    plot_methods(summary_metrics)
+
+def main():
+    """
     data = load_data(
         path_to_annotations='../data/annotations/AesopFablesCharacterSentiment.json',
         path_to_coref='../results/spacy/coref',
         path_to_ner='../results/spacy/ner',
     )
+    
     get_sentiment_stats(data)    
     
     data = predict_sentiment(data)    
@@ -744,9 +790,9 @@ def main():
     store_path = '../results/sentiment/sentiment_evaluation_summary_metrics.json'
     with open(store_path) as json_file:
         summary_metrics = json.load(json_file)                        
-    """
-    plot_metrics(summary_metrics)
-
+    
+    plot_performance(summary_metrics)
+    
 
 if __name__ == "__main__":    
     main()
