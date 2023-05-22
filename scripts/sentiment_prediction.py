@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 import itertools
 import random
 VERBOSE = False
+
+
 class SentimentPrediction: 
 
     def __init__(self):
@@ -32,6 +34,7 @@ class SentimentPrediction:
     def score_sentiment_sentence(self,sentence):
         pass
 
+
 class SentimentSentenceRandom(SentimentPrediction): 
 
     def __init__(self):
@@ -47,7 +50,8 @@ class SentimentSentenceRandom(SentimentPrediction):
     
     def __str__(self):
         return "SentimentSentenceRandom"
-    
+
+
 class SentimentAfinn(SentimentPrediction): 
 
     def __init__(self):
@@ -70,6 +74,7 @@ class SentimentAfinn(SentimentPrediction):
     
     def __str__(self):
         return "SentimentAfinn"
+
 
 class SentimentRoBERTa(SentimentPrediction): 
 
@@ -97,6 +102,7 @@ class SentimentRoBERTa(SentimentPrediction):
     def __str__(self):
         return "SentimentRoBERTa"
 
+
 class SentimentStanza(SentimentPrediction): 
 
     def __init__(self):
@@ -120,7 +126,6 @@ class SentimentStanza(SentimentPrediction):
             print("SentimentStanza.score_sentiment_sentence(): score: " + str(score))        
         
         return score 
-        
 
     def __str__(self):
         return "SentimentStanza"
@@ -143,6 +148,7 @@ class SentimentSpacy(SentimentPrediction):
 
     def __str__(self):
         return "SentimentSpacy"
+
 
 class SentimentAnsamble(SentimentPrediction):
 
@@ -199,6 +205,7 @@ class SentimentAnsamble(SentimentPrediction):
 
     def __str__(self):
         return "SentimentAnsamble"
+
 
 def test_the_wolf_and_kid_story():
     story = {
@@ -291,6 +298,7 @@ def test_the_wolf_and_kid_story():
         for model in models:
             print(str(model) + ", score: " + str(scores[model])  + ", truth: " + str(story["character_sentiment"][character]))
 
+
 def load_story_coref(story, path_to_coref):
     
     file = "{}.json".format(story['title'].replace(' ', '_'))
@@ -298,6 +306,7 @@ def load_story_coref(story, path_to_coref):
     with open(path_to_file) as json_file:
         story_coref = json.load(json_file)
     return story_coref
+
 
 def load_story_ner(story, path_to_ner):
     
@@ -375,7 +384,8 @@ def extract_characters_sentences(story,_type):
         character: extract_character_sentences(story, character, _type)
         for character in story['story_ner']['characters']
     }
-    
+
+
 def predict_sentiment_on_data(data):
     models = [
         #SentimentSentenceRandom(),
@@ -410,6 +420,7 @@ def predict_sentiment_on_data(data):
 
         
     return data
+
 
 def get_sentiment_stats(data):
     stats = {
@@ -528,6 +539,7 @@ def predict_sentiment(data):
 
     return data
 
+
 def calc_metrics(confusion_matrix):
     tp = confusion_matrix["tp"]
     fp = confusion_matrix["fp"]
@@ -554,6 +566,7 @@ def calc_metrics(confusion_matrix):
         "Sens": Sens,        
         "Pr": Pr,        
     }
+
 
 def eval_predict_sentiment(data):
 
@@ -697,6 +710,7 @@ def eval_predict_sentiment(data):
         f.write(json.dumps(summary_metrics,indent=4))
     
     return summary_metrics
+
 
 def plot_metrics(summary_metrics):
     classes = ["negative", "positive", "neutral"]

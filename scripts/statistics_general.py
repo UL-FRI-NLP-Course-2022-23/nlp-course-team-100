@@ -1,20 +1,16 @@
 import re
 import seaborn as sns
-import nltk
 from nltk.corpus import stopwords
 from collections import Counter
-import json
 import matplotlib.pyplot as plt
 from utils import *
+
 
 def plot_top_non_stopwords_barchart(text):
     stop = set(stopwords.words('english'))
 
-    new = text.split()
-    print(new)
-    corpus = [word for word in new]
+    corpus = [word for word in text]
 
-    print(corpus)
     counter = Counter(corpus)
     most = counter.most_common()
 
@@ -25,14 +21,21 @@ def plot_top_non_stopwords_barchart(text):
             y.append(count)
 
     sns.barplot(x=y, y=x)
-    plt.show()
+    plt.title("Top most used non-stopwords")
+    plt.savefig("../plots/top_non_stopwords")
+    plt.clf()
+
+    topMostNonStopwords = (most[0:10])
+
+    return topMostNonStopwords
 
 
 def write_to_txt(results):
-    filename = "../results/statistics/story_stats.txt"
+    filename = "../results/statistics/stories_stats.txt"
 
     with open(filename, 'w') as f:
         f.write(results)
+
 
 def main():
 
@@ -57,6 +60,8 @@ def main():
         sentences += re.split(r"(?<!\w\.\w.)(?<![A-Z]\.)(?<![A-Z][a-z]\.)(?<=\.|\?)", concat_story)
         storiesCount += 1
 
+    topNonStopwords = plot_top_non_stopwords_barchart(words)
+
     avgLetters = len(chars) / len(words)
     results += ("Average letters per word: " + str(avgLetters)) + "\n"
 
@@ -69,7 +74,7 @@ def main():
     results += ("Characters: " + str(len(chars))) + "\n"
     results += ("Words: " + str(len(words))) + "\n"
     results += ("Sentences: " + str(len(sentences))) + "\n"
-
+    results += ("Top 10 non-Stopwords: " + str(topNonStopwords)) + "\n"
     write_to_txt(results)
 
 
