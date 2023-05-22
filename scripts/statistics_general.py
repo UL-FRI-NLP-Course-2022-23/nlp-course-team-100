@@ -2,6 +2,7 @@ import re
 import seaborn as sns
 from nltk.corpus import stopwords
 from collections import Counter
+import nltk
 import matplotlib.pyplot as plt
 from utils import *
 
@@ -28,6 +29,17 @@ def plot_top_non_stopwords_barchart(text):
     topMostNonStopwords = (most[0:10])
 
     return topMostNonStopwords
+
+
+def plot_words_count_chart(text):
+
+
+    fig = plt.figure(figsize=(10, 4))
+    plt.gcf().subplots_adjust(bottom=0.2)  # to avoid x-ti
+    fdist = nltk.FreqDist(text)
+    fdist.plot(30, title="Words with highest count", cumulative=False)
+    fig.savefig("../plots/highest_count_words")
+    plt.clf()
 
 
 def write_to_txt(results):
@@ -61,6 +73,7 @@ def main():
         storiesCount += 1
 
     topNonStopwords = plot_top_non_stopwords_barchart(words)
+    plot_words_count_chart(words)
 
     avgLetters = len(chars) / len(words)
     results += ("Average letters per word: " + str(avgLetters)) + "\n"
