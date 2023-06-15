@@ -7,3 +7,9 @@ Team members:
  
 Group public acronym/name: `Team 100`
  > This value will be used for publishing marks/scores. It will be known only to you and not you colleagues.
+
+ ## Dataset
+ Our manually annotated dataset is available in the repository in [data](/data/annotations/AesopFablesCharacterSentiment.json). For each story we manually added the characters and their overall sentiment in the story.
+
+ ## Models
+ We did not additionaly train any models. To test our code, you can install everything with the command `pip install -r requirements.txt` .

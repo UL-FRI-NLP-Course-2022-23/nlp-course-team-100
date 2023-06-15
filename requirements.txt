@@ -4,3 +4,4 @@ spacy
 spacytextblob
 scipy
 stanza
+allennlp
